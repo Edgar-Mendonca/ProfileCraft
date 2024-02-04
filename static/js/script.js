@@ -1,53 +1,3 @@
-function toggleInputFields(checkboxId, textInputId, urlInputId) {
-    const checkbox = document.getElementById(checkboxId);
-    const textInput = document.getElementById(textInputId);
-    const urlInput = document.getElementById(urlInputId);
-
-    textInput.disabled = !checkbox.checked;
-    urlInput.disabled = !checkbox.checked;
-}
-
-document.getElementById("enableWorkingOn").addEventListener("change", function () {
-    toggleInputFields("enableWorkingOn", "workingOnText", "workingOnURL");
-});
-
-document.getElementById("enableCollaborate").addEventListener("change", function () {
-    toggleInputFields("enableCollaborate", "collaborateText", "collaborateURL");
-});
-
-document.getElementById("enableHelpWith").addEventListener("change", function () {
-    toggleInputFields("enableHelpWith", "helpWithText", "helpWithURL");
-});
-
-document.getElementById("enableLearning").addEventListener("change", function () {
-    toggleInputFields("enableLearning", "learningText", "learningURL");
-});
-
-document.getElementById("enableAskMe").addEventListener("change", function () {
-    toggleInputFields("enableAskMe", "askMeText", "askMeURL");
-});
-
-document.getElementById("enableReachMe").addEventListener("change", function () {
-    toggleInputFields("enableReachMe", "reachMeText", "reachMeURL");
-});
-
-document.getElementById("enableProjects").addEventListener("change", function () {
-    toggleInputFields("enableProjects", "projectsText", "projectsURL");
-});
-
-document.getElementById("enableArticles").addEventListener("change", function () {
-    toggleInputFields("enableArticles", "articlesText", "articlesURL");
-});
-
-document.getElementById("enableExperiences").addEventListener("change", function () {
-    toggleInputFields("enableExperiences", "experiencesText", "experiencesURL");
-});
-
-document.getElementById("enableFunFact").addEventListener("change", function () {
-    toggleInputFields("enableFunFact", "funFactText", null);
-});
-
-
 // Function to generate the README content
 function generateReadmeContent() {
     // Collect user input values
@@ -55,139 +5,192 @@ function generateReadmeContent() {
     const fullName = document.getElementById("fullName").value;
     const aboutMe = document.getElementById("aboutMe").value;
 
-    // Working On
-    const includeWorkingOn = document.getElementById("enableWorkingOn").checked;
+    // Collect user input values for Working On section
     const workingOnText = document.getElementById("workingOnText").value;
     const workingOnURL = document.getElementById("workingOnURL").value;
 
-    // Collaborate
-    const includeCollaborate = document.getElementById("enableCollaborate").checked;
+    // Collect user input values for Collaborate section
     const collaborateText = document.getElementById("collaborateText").value;
     const collaborateURL = document.getElementById("collaborateURL").value;
 
-    // Help With
-    const includeHelpWith = document.getElementById("enableHelpWith").checked;
+    // Collect user input values for Help With section
     const helpWithText = document.getElementById("helpWithText").value;
     const helpWithURL = document.getElementById("helpWithURL").value;
 
-    // Learning
-    const includeLearning = document.getElementById("enableLearning").checked;
+    // Collect user input values for Learning section
     const learningText = document.getElementById("learningText").value;
     const learningURL = document.getElementById("learningURL").value;
 
-    // Ask Me
-    const includeAskMe = document.getElementById("enableAskMe").checked;
+    // Collect user input values for Ask Me section
     const askMeText = document.getElementById("askMeText").value;
     const askMeURL = document.getElementById("askMeURL").value;
 
-    // Reach Me
-    const includeReachMe = document.getElementById("enableReachMe").checked;
+    // Collect user input values for Reach Me section
     const reachMeText = document.getElementById("reachMeText").value;
     const reachMeURL = document.getElementById("reachMeURL").value;
 
-    // Projects
-    const includeProjects = document.getElementById("enableProjects").checked;
+    // Collect user input values for Projects section
     const projectsText = document.getElementById("projectsText").value;
     const projectsURL = document.getElementById("projectsURL").value;
 
-    // Articles
-    const includeArticles = document.getElementById("enableArticles").checked;
+    // Collect user input values for Articles section
     const articlesText = document.getElementById("articlesText").value;
     const articlesURL = document.getElementById("articlesURL").value;
 
-    // Experiences
-    const includeExperiences = document.getElementById("enableExperiences").checked;
+    // Collect user input values for Experiences section
     const experiencesText = document.getElementById("experiencesText").value;
     const experiencesURL = document.getElementById("experiencesURL").value;
 
-    // Fun Fact
-    const includeFunFact = document.getElementById("enableFunFact").checked;
+    // Collect user input values for Fun Fact section
     const funFactText = document.getElementById("funFactText").value;
+
+    // Collect user input values for Connect with me section
+    const githubUsername = document.getElementById("githubUsername").value;
+    const twitterUsername = document.getElementById("twitterUsername").value;
+    const youtubeUsername = document.getElementById("youtubeUsername").value;
+    const instagramUsername = document.getElementById("instagramUsername").value;
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
     readmeContent += `![Profile Views](https://komarev.com/ghpvc/?username=${username}&color=green)\n\n`;
-    readmeContent += `## About Me\n${aboutMe ? aboutMe : 'Add a brief description about yourself.'}\n\n`;
+    readmeContent += `## 📝 About Me\n${aboutMe ? aboutMe : 'Add a brief description about yourself.'}\n\n`;
 
-    if (includeWorkingOn) {
-        readmeContent += `## 🔭 I’m currently working on\n`;
-        readmeContent += `- ${workingOnText ? workingOnText : 'Describe your current projects'} `;
-        readmeContent += `([${workingOnURL ? 'Link' : 'Add link'}](${workingOnURL ? workingOnURL : ''}))\n\n`;
+    // Working On
+    if (workingOnText || workingOnURL) {
+        readmeContent += `## 🛠️ I’m currently working on\n`;
+        readmeContent += `${workingOnText ? `${workingOnText}` : ''}${workingOnURL ? ` ([${workingOnURL}](${workingOnURL}))` : ''}\n\n`;
     }
 
-    if (includeCollaborate) {
-        readmeContent += `## 👯 I’m looking to collaborate on\n`;
-        readmeContent += `- ${collaborateText ? collaborateText : 'Specify areas you\'re interested in collaborating'} `;
-        readmeContent += `([${collaborateURL ? 'Link' : 'Add link'}](${collaborateURL ? collaborateURL : ''}))\n\n`;
+    // Collaborate
+    if (collaborateText || collaborateURL) {
+        readmeContent += `## 🧑‍🤝‍🧑 I’m looking to collaborate on\n`;
+        readmeContent += `${collaborateText ? `${collaborateText}` : ''}${collaborateURL ? ` ([${collaborateURL}](${collaborateURL}))` : ''}\n\n`;
     }
 
-    if (includeHelpWith) {
-        readmeContent += `## 🤝 I’m looking for help with\n`;
-        readmeContent += `- ${helpWithText ? helpWithText : 'Describe what you need help with'} `;
-        readmeContent += `([${helpWithURL ? 'Link' : 'Add link'}](${helpWithURL ? helpWithURL : ''}))\n\n`;
+    // Help With
+    if (helpWithText || helpWithURL) {
+        readmeContent += `## 💁 I’m looking for help with\n`;
+        readmeContent += `${helpWithText ? `${helpWithText}` : ''}${helpWithURL ? ` ([${helpWithURL}](${helpWithURL}))` : ''}\n\n`;
     }
 
-    if (includeLearning) {
-        readmeContent += `## 🌱 I’m currently learning\n`;
-        readmeContent += `- ${learningText ? learningText : 'List topics or technologies you are currently learning'} `;
-        readmeContent += `([${learningURL ? 'Link' : 'Add link'}](${learningURL ? learningURL : ''}))\n\n`;
+    // Learning
+    if (learningText || learningURL) {
+        readmeContent += `## 📒 I’m currently learning\n`;
+        readmeContent += `${learningText ? `${learningText}` : ''}${learningURL ? ` ([${learningURL}](${learningURL}))` : ''}\n\n`;
     }
 
-    if (includeAskMe) {
+    // Ask Me
+    if (askMeText || askMeURL) {
         readmeContent += `## 💬 Ask me about\n`;
-        readmeContent += `- ${askMeText ? askMeText : 'What topics are you knowledgeable about?'} `;
-        readmeContent += `([${askMeURL ? 'Link' : 'Add link'}](${askMeURL ? askMeURL : ''}))\n\n`;
+        readmeContent += `${askMeText ? `${askMeText}` : ''}${askMeURL ? ` ([${askMeURL}](${askMeURL}))` : ''}\n\n`;
     }
 
-    if (includeReachMe) {
-        readmeContent += `## 📫 How to reach me\n`;
-        readmeContent += `- ${reachMeText ? reachMeText : 'Provide contact information or social media links'} `;
-        readmeContent += `([${reachMeURL ? 'Link' : 'Add link'}](${reachMeURL ? reachMeURL : ''}))\n\n`;
+    // Reach Me
+    if (reachMeText || reachMeURL) {
+        readmeContent += `## 📬 How to reach me\n`;
+        readmeContent += `${reachMeText ? `${reachMeText}` : ''}${reachMeURL ? ` ([${reachMeURL}](${reachMeURL}))` : ''}\n\n`;
     }
 
-    if (includeProjects) {
-        readmeContent += `## 👨‍💻 All of my projects are available at\n`;
-        readmeContent += `- ${projectsText ? projectsText : 'Share links to your GitHub repositories'} `;
-        readmeContent += `([${projectsURL ? 'Link' : 'Add link'}](${projectsURL ? projectsURL : ''}))\n\n`;
+    // Projects
+    if (projectsText || projectsURL) {
+        readmeContent += `## 💻 All of my projects are available at\n`;
+        readmeContent += `${projectsText ? `${projectsText}` : ''}${projectsURL ? ` ([${projectsURL}](${projectsURL}))` : ''}\n\n`;
     }
 
-    if (includeArticles) {
-        readmeContent += `## 📝 I regularly write articles on\n`;
-        readmeContent += `- ${articlesText ? articlesText : 'Link to your blog or articles'} `;
-        readmeContent += `([${articlesURL ? 'Link' : 'Add link'}](${articlesURL ? articlesURL : ''}))\n\n`;
+    // Articles
+    if (articlesText || articlesURL) {
+        readmeContent += `## ✍️ I regularly write articles on\n`;
+        readmeContent += `${articlesText ? `${articlesText}` : ''}${articlesURL ? ` ([${articlesURL}](${articlesURL}))` : ''}\n\n`;
     }
 
-    if (includeExperiences) {
-        readmeContent += `## 📄 Know about my experiences\n`;
-        readmeContent += `- ${experiencesText ? experiencesText : 'Share details about your experiences'} `;
-        readmeContent += `([${experiencesURL ? 'Link' : 'Add link'}](${experiencesURL ? experiencesURL : ''}))\n\n`;
+    // Experiences
+    if (experiencesText || experiencesURL) {
+        readmeContent += `## 🧑‍💼 Know about my experiences\n`;
+        readmeContent += `${experiencesText ? `${experiencesText}` : ''}${experiencesURL ? ` ([${experiencesURL}](${experiencesURL}))` : ''}\n\n`;
     }
 
-    if (includeFunFact) {
-        readmeContent += `## ⚡ Fun fact\n`;
-        readmeContent += `- ${funFactText ? funFactText : 'Share an interesting fact about yourself'}\n\n`;
+    // Fun Fact
+    if (funFactText) {
+        readmeContent += `## 💡 Fun fact\n`;
+        readmeContent += `${funFactText}\n\n`;
     }
+
+    // Connect with me
+    readmeContent += `## 🔗 Connect with me\n`;
+
+    if (githubUsername) {
+        readmeContent += `<a href="https://github.com/${githubUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/material-outlined/48/github.png" alt="github"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (twitterUsername) {
+        readmeContent += `<a href="https://twitter.com/${twitterUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (youtubeUsername) {
+        readmeContent += `<a href="https://www.youtube.com/${youtubeUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (instagramUsername) {
+        readmeContent += `<a href="https://www.instagram.com/${instagramUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    readmeContent += `\n\n`;
 
     return readmeContent;
 }
 
 // Function to update the live preview
 function updateLivePreview() {
-    const previewContent = generateReadmeContent();
-    document.getElementById("livePreview").innerText = previewContent;
-    
-    // Enable the Download README button
-    document.getElementById("downloadReadmeBtn").disabled = false;
+    const livePreview = document.getElementById("livePreview");
+    const readmeContent = generateReadmeContent();
+    livePreview.textContent = readmeContent;
 }
 
-// Function to update the live preview
-function updateLivePreview() {
-    const previewContent = generateReadmeContent();
-    document.getElementById("livePreview").innerText = previewContent;
-    
-    // Enable the Download README button
-    document.getElementById("downloadReadmeBtn").disabled = false;
-}
+// Event listener for input changes in the "About Me" section
+document.getElementById("aboutMe").addEventListener("input", updateLivePreview);
+
+// Event listener for input changes in the "Username and Full Name" sections
+document.getElementById("username").addEventListener("input", updateLivePreview);
+document.getElementById("fullName").addEventListener("input", updateLivePreview);
+
+// Event listener for input changes in the "Profile Highlights" sections
+document.getElementById("workingOnText").addEventListener("input", updateLivePreview); 
+document.getElementById("workingOnURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("collaborateText").addEventListener("input", updateLivePreview); 
+document.getElementById("collaborateURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("helpWithText").addEventListener("input", updateLivePreview); 
+document.getElementById("helpWithURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("learningText").addEventListener("input", updateLivePreview); 
+document.getElementById("learningURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("askMeText").addEventListener("input", updateLivePreview); 
+document.getElementById("askMeURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("reachMeText").addEventListener("input", updateLivePreview); 
+document.getElementById("reachMeURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("projectsText").addEventListener("input", updateLivePreview); 
+document.getElementById("projectsURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("articlesText").addEventListener("input", updateLivePreview); 
+document.getElementById("articlesURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("experiencesText").addEventListener("input", updateLivePreview); 
+document.getElementById("experiencesURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("funFactText").addEventListener("input", updateLivePreview); 
+
+// Event listeners for input changes in the "Connect with me" section
+document.getElementById("githubUsername").addEventListener("input", updateLivePreview);
+document.getElementById("twitterUsername").addEventListener("input", updateLivePreview);
+document.getElementById("youtubeUsername").addEventListener("input", updateLivePreview);
+document.getElementById("instagramUsername").addEventListener("input", updateLivePreview);
+
+// Initial live preview update
+updateLivePreview();
 
 // Function to download the README
 function downloadReadme() {
@@ -200,66 +203,3 @@ function downloadReadme() {
     link.click();
     document.body.removeChild(link);
 }
-
-// Event listeners for input changes
-document.getElementById("enableWorkingOn").addEventListener("change", function () {
-    toggleInputFields("enableWorkingOn", "workingOnText", "workingOnURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableCollaborate").addEventListener("change", function () {
-    toggleInputFields("enableCollaborate", "collaborateText", "collaborateURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableHelpWith").addEventListener("change", function () {
-    toggleInputFields("enableHelpWith", "helpWithText", "helpWithURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableLearning").addEventListener("change", function () {
-    toggleInputFields("enableLearning", "learningText", "learningURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableAskMe").addEventListener("change", function () {
-    toggleInputFields("enableAskMe", "askMeText", "askMeURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableReachMe").addEventListener("change", function () {
-    toggleInputFields("enableReachMe", "reachMeText", "reachMeURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableProjects").addEventListener("change", function () {
-    toggleInputFields("enableProjects", "projectsText", "projectsURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableArticles").addEventListener("change", function () {
-    toggleInputFields("enableArticles", "articlesText", "articlesURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableExperiences").addEventListener("change", function () {
-    toggleInputFields("enableExperiences", "experiencesText", "experiencesURL");
-    updateLivePreview();
-});
-
-document.getElementById("enableFunFact").addEventListener("change", function () {
-    toggleInputFields("enableFunFact", "funFactText", null);
-    updateLivePreview();
-});
-
-
-
-
-// Event listener for the "Generate README" button
-document.getElementById("generateReadmeBtn").addEventListener("click", function () {
-    downloadReadme();
-});
-
-// Initial live preview update
-updateLivePreview();
-
