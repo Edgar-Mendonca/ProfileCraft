@@ -7,9 +7,10 @@
   <link rel="icon" href="static/images/favicon.ico" type="image/x-icon">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
   <link rel="stylesheet" href="static/css/styles.css">
+
 </head>
+
 
 <body style="font-family: 'Open Sans', sans-serif;">
 <!-- Announcement -->
@@ -25,7 +26,7 @@
         <a href="https://github.com/Edgar-Mendonca" target="_blank" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-github"></i> My GitHub</a>
         <a href="https://twitter.com/EdgarMendonca7" target="_blank" class="btn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-twitter"></i> My Twitter</a>
     </div>
-
+ 
 <hr>
     
 <!-- Input Form -->
@@ -53,162 +54,166 @@
     <label for="profileHighlights" class="form-label"><h3><i class="bi bi-info-square"></i> Profile Highlights</h3></label>
     <!-- Working On Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="enableWorkingOn">
-        <label class="form-check-label" for="enableWorkingOn">Include 🔭 I’m currently working on</label>
-        </div>
+        <label for="workingOnText" class="form-label"><i class="bi bi-tools"></i> I’m currently working on</label>
         <div class="row mt-2">
-        <div class="col">
-            <input type="text" class="form-control" id="workingOnText" placeholder="Briefly describe your current projects" disabled>
-        </div>
-        <div class="col">
-            <input type="url" class="form-control" id="workingOnURL" placeholder="Link to your project" disabled>
-        </div>
+            <div class="col">
+                <input type="text" class="form-control" id="workingOnText" placeholder="Briefly describe your current projects">
+            </div>
+            <div class="col">
+                <input type="url" class="form-control" id="workingOnURL" placeholder="Link to your project">
+            </div>
         </div>
     </div>
   
     <!-- Collaborate Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableCollaborate">
-            <label class="form-check-label" for="enableCollaborate">Include 👯 I’m looking to collaborate on</label>
-        </div>
+        <label for="collaborateText" class="form-label"><i class="bi bi-people"></i> I’m looking to collaborate on</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="collaborateText" placeholder="Specify areas you're interested in collaborating" disabled>
+                <input type="text" class="form-control" id="collaborateText" placeholder="Specify areas you're interested in collaborating">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="collaborateURL" placeholder="Link to collaboration opportunity" disabled>
+                <input type="url" class="form-control" id="collaborateURL" placeholder="Link to collaboration opportunity">
             </div>
         </div>
     </div>
 
     <!-- Help With Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableHelpWith">
-            <label class="form-check-label" for="enableHelpWith">Include 🤝 I’m looking for help with</label>
-        </div>
+        <label for="helpWithText" class="form-label"><i class="bi bi-question"></i> I’m looking for help with</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="helpWithText" placeholder="Describe what you need help with" disabled>
+                <input type="text" class="form-control" id="helpWithText" placeholder="Describe what you need help with">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="helpWithURL" placeholder="Link to your request for help" disabled>
+                <input type="url" class="form-control" id="helpWithURL" placeholder="Link to your request for help">
             </div>
         </div>
     </div>
  
     <!-- Learning Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableLearning">
-            <label class="form-check-label" for="enableLearning">Include 🌱 I’m currently learning</label>
-        </div>
+        <label for="learningText" class="form-label"><i class="bi bi-book"></i> I’m currently learning</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="learningText" placeholder="List topics or technologies you are currently learning" disabled>
+                <input type="text" class="form-control" id="learningText" placeholder="List topics or technologies you are currently learning">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="learningURL" placeholder="Link to your learning resources" disabled>
+                <input type="url" class="form-control" id="learningURL" placeholder="Link to your learning resources">
             </div>
         </div>
     </div>
 
     <!-- Ask Me Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableAskMe">
-            <label class="form-check-label" for="enableAskMe">Include 💬 Ask me about</label>
-        </div>
+        <label for="askMeText" class="form-label"><i class="bi bi-chat-dots"></i> Ask me about</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="askMeText" placeholder="What topics are you knowledgeable about?" disabled>
+                <input type="text" class="form-control" id="askMeText" placeholder="What topics are you knowledgeable about?">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="askMeURL" placeholder="Link to your expertise or discussions" disabled>
+                <input type="url" class="form-control" id="askMeURL" placeholder="Link to your expertise or discussions">
             </div>
         </div>
     </div>
 
     <!-- Reach Me Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableReachMe">
-            <label class="form-check-label" for="enableReachMe">Include 📫 How to reach me</label>
-        </div>
+        <label for="reachMeText" class="form-label"><i class="bi bi-envelope"></i> How to reach me</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="reachMeText" placeholder="Provide contact information or social media links" disabled>
+                <input type="text" class="form-control" id="reachMeText" placeholder="Provide contact information or social media links">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="reachMeURL" placeholder="Link to your social media or contact page" disabled>
+                <input type="url" class="form-control" id="reachMeURL" placeholder="Link to your social media or contact page">
             </div>
         </div>
     </div>
 
     <!-- Projects Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableProjects">
-            <label class="form-check-label" for="enableProjects">Include 👨‍💻 All of my projects are available at</label>
-        </div>
+        <label for="projectsText" class="form-label"><i class="bi bi-folder"></i> All of my projects are available at</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="projectsText" placeholder="Share links to your GitHub repositories" disabled>
+                <input type="text" class="form-control" id="projectsText" placeholder="Share links to your GitHub repositories">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="projectsURL" placeholder="Link to your GitHub projects" disabled>
+                <input type="url" class="form-control" id="projectsURL" placeholder="Link to your GitHub projects">
             </div>
         </div>
     </div>
 
     <!-- Articles Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableArticles">
-            <label class="form-check-label" for="enableArticles">Include 📝 I regularly write articles on</label>
-        </div>
+        <label for="articlesText" class="form-label"><i class="bi bi-pencil"></i> I regularly write articles on</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="articlesText" placeholder="Link to your blog or articles" disabled>
+                <input type="text" class="form-control" id="articlesText" placeholder="Link to your blog or articles">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="articlesURL" placeholder="Link to your articles or blog" disabled>
+                <input type="url" class="form-control" id="articlesURL" placeholder="Link to your articles or blog">
             </div>
         </div>
     </div>
 
     <!-- Experiences Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableExperiences">
-            <label class="form-check-label" for="enableExperiences">Include 📄 Know about my experiences</label>
-        </div>
+        <label for="experiencesText" class="form-label"><i class="bi bi-file-earmark-text"></i> Know about my experiences</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="experiencesText" placeholder="Share details about your experiences" disabled>
+                <input type="text" class="form-control" id="experiencesText" placeholder="Share details about your experiences">
             </div>
             <div class="col">
-                <input type="url" class="form-control" id="experiencesURL" placeholder="Link to your portfolio or experiences" disabled>
+                <input type="url" class="form-control" id="experiencesURL" placeholder="Link to your portfolio or experiences">
             </div>
         </div>
     </div>
 
     <!-- Fun Fact Container -->
     <div class="mb-3">
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="enableFunFact">
-            <label class="form-check-label" for="enableFunFact">Include ⚡ Fun fact</label>
-        </div>
+        <label for="funFactText" class="form-label"><i class="bi bi-lightbulb"></i> Fun fact</label>
         <div class="row mt-2">
             <div class="col">
-                <input type="text" class="form-control" id="funFactText" placeholder="Share an interesting fact about yourself" disabled>
+                <input type="text" class="form-control" id="funFactText" placeholder="Share an interesting fact about yourself">
             </div>
             <!-- No URL input for Fun Fact -->
         </div>
     </div>
 
+<hr>
+
+<!-- Connect with me -->
+<div class="mb-5">
+    <label for="connectWithMe" class="form-label"><h3><i class="bi bi-link"></i> Connect with me</h3></label>
+    
+    
+    <div class="row mb-3">
+        <!-- GitHub -->
+        <div class="col">
+            <label for="githubUsername" class="form-label"><i class="bi bi-github"></i> GitHub Username</label>
+            <input type="text" class="form-control" id="githubUsername" placeholder="Enter your GitHub username">
+        </div>
+        <!-- Twitter -->
+        <div class="col">
+            <label for="twitterUsername" class="form-label"><i class="bi bi-twitter"></i> Twitter Username</label>
+            <input type="text" class="form-control" id="twitterUsername" placeholder="Enter your Twitter username">
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <!-- YouTube -->
+        <div class="col">
+            <label for="youtubeUsername" class="form-label"><i class="bi bi-youtube"></i> YouTube Username</label>
+            <input type="text" class="form-control" id="youtubeUsername" placeholder="Enter your YouTube username">
+        </div>
+        <!-- Instagram -->
+        <div class="col">
+            <label for="instagramUsername" class="form-label"><i class="bi bi-instagram"></i> Instagram Username</label>
+            <input type="text" class="form-control" id="instagramUsername" placeholder="Enter your Instagram username">
+        </div>
+    </div>
+
+</div>
 
 </form>
 
@@ -226,7 +231,7 @@
 
 <!-- Download README Button -->
 <div class="py-3 text-center">
-    <button type="button" class="btn btn-success" onclick="downloadReadme()">Download README</button>
+    <button type="button" class="btn btn-success" onclick="downloadReadme()">Download README.md</button>
 </div>
 
 </div>
