@@ -21,11 +21,28 @@
     <h1 class="mb-4 text-center">
         <img src="static/images/ProfileCraft-logo.jpeg" alt="ProfileCraft Logo" width="100" height="100"> ProfileCraft: GitHub Readme Generator
     </h1>
-        <div class="py-3 text-center">
+    <div class="py-3 text-center">
         <a href="https://github.com/Edgar-Mendonca" target="_blank" class="btn btn-outline-dark" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-github"></i> My GitHub</a>
         <a href="https://twitter.com/EdgarMendonca7" target="_blank" class="btn btn-outline-primary" tabindex="-1" role="button" aria-disabled="true"><i class="bi bi-twitter"></i> My Twitter</a>
-
     </div>
+  
+    <div class="py-3">
+        <p id="visitorCount">Loading...</p>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          if (typeof(Storage) !== 'undefined') {
+            let count = localStorage.getItem('visitorCount') || 0;
+            
+            document.getElementById('visitorCount').innerText = `Total Visitors: ${count}`;
+            count++;
+            
+            localStorage.setItem('visitorCount', count);
+          } else {
+            document.getElementById('visitorCount').innerText = 'LocalStorage is not supported, unable to track visitors.';
+          }
+        });
+      </script>
 
 <hr>
     
