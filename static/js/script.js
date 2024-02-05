@@ -203,3 +203,78 @@ function downloadReadme() {
     link.click();
     document.body.removeChild(link);
 }
+
+// Function to save form data to localStorage
+function saveFormData() {
+    const formData = {
+        username: document.getElementById("username").value,
+        fullName: document.getElementById("fullName").value,
+        aboutMe: document.getElementById("aboutMe").value,
+        workingOnText: document.getElementById("workingOnText").value,
+        workingOnURL: document.getElementById("workingOnURL").value,
+        collaborateText: document.getElementById("collaborateText").value,
+        collaborateURL: document.getElementById("collaborateURL").value,
+        helpWithText: document.getElementById("helpWithText").value,
+        helpWithURL: document.getElementById("helpWithURL").value,
+        learningText: document.getElementById("learningText").value,
+        learningURL: document.getElementById("learningURL").value,
+        askMeText: document.getElementById("askMeText").value,
+        askMeURL: document.getElementById("askMeURL").value,
+        reachMeText: document.getElementById("reachMeText").value,
+        reachMeURL: document.getElementById("reachMeURL").value,
+        projectsText: document.getElementById("projectsText").value,
+        projectsURL: document.getElementById("projectsURL").value,
+        articlesText: document.getElementById("articlesText").value,
+        articlesURL: document.getElementById("articlesURL").value,
+        experiencesText: document.getElementById("experiencesText").value,
+        experiencesURL: document.getElementById("experiencesURL").value,
+        funFactText: document.getElementById("funFactText").value,
+        githubUsername: document.getElementById("githubUsername").value,
+        twitterUsername: document.getElementById("twitterUsername").value,
+        youtubeUsername: document.getElementById("youtubeUsername").value,
+        instagramUsername: document.getElementById("instagramUsername").value,
+    };
+
+    localStorage.setItem('formData', JSON.stringify(formData));
+}
+
+// Function to load form data from localStorage
+function loadFormData() {
+    const savedFormData = localStorage.getItem('formData');
+
+    if (savedFormData) {
+        const formData = JSON.parse(savedFormData);
+
+        document.getElementById("username").value = formData.username || '';
+        document.getElementById("fullName").value = formData.fullName || '';
+        document.getElementById("aboutMe").value = formData.aboutMe || '';
+        document.getElementById("workingOnText").value = formData.workingOnText || '';
+        document.getElementById("workingOnURL").value = formData.workingOnURL || '';
+        document.getElementById("collaborateText").value = formData.collaborateText || '';
+        document.getElementById("collaborateURL").value = formData.collaborateURL || '';
+        document.getElementById("helpWithText").value = formData.helpWithText || '';
+        document.getElementById("helpWithURL").value = formData.helpWithURL || '';
+        document.getElementById("learningText").value = formData.learningText || '';
+        document.getElementById("learningURL").value = formData.learningURL || '';
+        document.getElementById("askMeText").value = formData.askMeText || '';
+        document.getElementById("askMeURL").value = formData.askMeURL || '';
+        document.getElementById("reachMeText").value = formData.reachMeText || '';
+        document.getElementById("reachMeURL").value = formData.reachMeURL || '';
+        document.getElementById("projectsText").value = formData.projectsText || '';
+        document.getElementById("projectsURL").value = formData.projectsURL || '';
+        document.getElementById("articlesText").value = formData.articlesText || '';
+        document.getElementById("articlesURL").value = formData.articlesURL || '';
+        document.getElementById("experiencesText").value = formData.experiencesText || '';
+        document.getElementById("experiencesURL").value = formData.experiencesURL || '';
+        document.getElementById("funFactText").value = formData.funFactText || '';
+        document.getElementById("githubUsername").value = formData.githubUsername || '';
+        document.getElementById("twitterUsername").value = formData.twitterUsername || '';
+        document.getElementById("youtubeUsername").value = formData.youtubeUsername || '';
+        document.getElementById("instagramUsername").value = formData.instagramUsername || '';
+    }
+}
+
+// Initial live preview update
+updateLivePreview();
+// Load form data when the page is loaded
+loadFormData();
