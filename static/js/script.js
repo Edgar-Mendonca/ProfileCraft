@@ -46,9 +46,26 @@ function generateReadmeContent() {
 
     // Collect user input values for Connect with me section
     const githubUsername = document.getElementById("githubUsername").value;
-    const twitterUsername = document.getElementById("twitterUsername").value;
     const youtubeUsername = document.getElementById("youtubeUsername").value;
+
+    const twitterUsername = document.getElementById("twitterUsername").value;
+    const linkedinUsername = document.getElementById("linkedinUsername").value;
+
+    const facebookUsername = document.getElementById("facebookUsername").value;
     const instagramUsername = document.getElementById("instagramUsername").value;
+
+    const stackoverflowUsername = document.getElementById("stackoverflowUsername").value;
+    const rssFeed = document.getElementById("rssFeed").value;
+
+    const devtoUsername = document.getElementById("devtoUsername").value;
+    const mediumUsername = document.getElementById("mediumUsername").value;
+
+    const codepenUsername = document.getElementById("codepenUsername").value;
+    const codesandboxUsername = document.getElementById("codesandboxUsername").value;
+
+    const gitlabUsername = document.getElementById("gitlabUsername").value;
+    const bitbucketUsername = document.getElementById("bitbucketUsername").value;
+
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
@@ -121,17 +138,50 @@ function generateReadmeContent() {
     if (githubUsername) {
         readmeContent += `<a href="https://github.com/${githubUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/material-outlined/48/github.png" alt="github"/></a>&nbsp;&nbsp;&nbsp;`;
     }
-
-    if (twitterUsername) {
-        readmeContent += `<a href="https://twitter.com/${twitterUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></a>&nbsp;&nbsp;&nbsp;`;
-    }
-
     if (youtubeUsername) {
         readmeContent += `<a href="https://www.youtube.com/${youtubeUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/></a>&nbsp;&nbsp;&nbsp;`;
     }
 
+    if (twitterUsername) {
+        readmeContent += `<a href="https://twitter.com/${twitterUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (linkedinUsername) {
+        readmeContent += `<a href="https://linkedin.com/${linkedinUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (facebookUsername) {
+        readmeContent += `<a href="https://www.facebook.com/${facebookUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/000000/facebook-new.png" alt="facebook-new"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
     if (instagramUsername) {
         readmeContent += `<a href="https://www.instagram.com/${instagramUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (stackoverflowUsername) {
+        readmeContent += `<a href="https://stackoverflow.com/${stackoverflowUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/stackoverflow.png" alt="stackoverflow"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (rssFeed) {
+        readmeContent += `<a href="https://rss.com/${rssFeed}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/rss.png" alt="rss"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (devtoUsername) {
+        readmeContent += `<a href="https://dev.to/${devtoUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/windows/48/dev.png" alt="dev"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (mediumUsername) {
+        readmeContent += `<a href="https://medium.com/${mediumUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/medium-logo.png" alt="medium-logo"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (codepenUsername) {
+        readmeContent += `<a href="https://codepen.io/${codepenUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/codepen.png" alt="codepen"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (codesandboxUsername) {
+        readmeContent += `<a href="https://codesandbox.io/${codesandboxUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-codesandbox-an-online-code-editor-and-sharing-web-application-projects-logo-color-tal-revivo.png" alt="external-codesandbox-an-online-code-editor-and-sharing-web-application-projects-logo-color-tal-revivo"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (gitlabUsername) {
+        readmeContent += `<a href="https://gitlab.com/${gitlabUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/gitlab.png" alt="gitlab"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (bitbucketUsername) {
+        readmeContent += `<a href="https://bitbucket.org/${bitbucketUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo.png" alt="external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo"/></a>&nbsp;&nbsp;&nbsp;`;
     }
 
     readmeContent += `\n\n`;
@@ -185,9 +235,25 @@ document.getElementById("funFactText").addEventListener("input", updateLivePrevi
 
 // Event listeners for input changes in the "Connect with me" section
 document.getElementById("githubUsername").addEventListener("input", updateLivePreview);
-document.getElementById("twitterUsername").addEventListener("input", updateLivePreview);
 document.getElementById("youtubeUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("twitterUsername").addEventListener("input", updateLivePreview);
+document.getElementById("linkedinUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("facebookUsername").addEventListener("input", updateLivePreview);
 document.getElementById("instagramUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("stackoverflowUsername").addEventListener("input", updateLivePreview);
+document.getElementById("rssFeed").addEventListener("input", updateLivePreview);
+
+document.getElementById("devtoUsername").addEventListener("input", updateLivePreview);
+document.getElementById("mediumUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("codepenUsername").addEventListener("input", updateLivePreview);
+document.getElementById("codesandboxUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("gitlabUsername").addEventListener("input", updateLivePreview);
+document.getElementById("bitbucketUsername").addEventListener("input", updateLivePreview);
 
 // Initial live preview update
 updateLivePreview();
@@ -203,6 +269,7 @@ function downloadReadme() {
     link.click();
     document.body.removeChild(link);
 }
+
 
 // Function to save form data to localStorage
 function saveFormData() {
@@ -229,10 +296,28 @@ function saveFormData() {
         experiencesText: document.getElementById("experiencesText").value,
         experiencesURL: document.getElementById("experiencesURL").value,
         funFactText: document.getElementById("funFactText").value,
+        
         githubUsername: document.getElementById("githubUsername").value,
-        twitterUsername: document.getElementById("twitterUsername").value,
         youtubeUsername: document.getElementById("youtubeUsername").value,
+
+        twitterUsername: document.getElementById("twitterUsername").value,
+        linkedinUsername: document.getElementById("linkedinUsername").value,
+
+        facebookUsername: document.getElementById("facebookUsername").value,
         instagramUsername: document.getElementById("instagramUsername").value,
+
+        stackoverflowUsername: document.getElementById("stackoverflowUsername").value,
+        rssFeed: document.getElementById("rssFeed").value,
+
+        devtoUsername: document.getElementById("devtoUsername").value,
+        mediumUsername: document.getElementById("mediumUsername").value,
+
+        codepenUsername: document.getElementById("codepenUsername").value,
+        codesandboxUsername: document.getElementById("codesandboxUsername").value,
+
+        gitlabUsername: document.getElementById("gitlabUsername").value,
+        bitbucketUsername: document.getElementById("bitbucketUsername").value,
+
     };
 
     localStorage.setItem('formData', JSON.stringify(formData));
@@ -268,9 +353,19 @@ function loadFormData() {
         document.getElementById("experiencesURL").value = formData.experiencesURL || '';
         document.getElementById("funFactText").value = formData.funFactText || '';
         document.getElementById("githubUsername").value = formData.githubUsername || '';
-        document.getElementById("twitterUsername").value = formData.twitterUsername || '';
         document.getElementById("youtubeUsername").value = formData.youtubeUsername || '';
+        document.getElementById("twitterUsername").value = formData.twitterUsername || '';
+        document.getElementById("linkedinUsername").value = formData.linkedinUsername || '';
+        document.getElementById("facebookUsername").value = formData.facebookUsername || '';
         document.getElementById("instagramUsername").value = formData.instagramUsername || '';
+        document.getElementById("stackoverflowUsername").value = formData.stackoverflowUsername || '';
+        document.getElementById("rssFeed").value = formData.rssFeed || '';
+        document.getElementById("devtoUsername").value = formData.devtoUsername || '';
+        document.getElementById("mediumUsername").value = formData.mediumUsername || '';
+        document.getElementById("codepenUsername").value = formData.codepenUsername || '';
+        document.getElementById("codesandboxUsername").value = formData.codesandboxUsername || '';
+        document.getElementById("gitlabUsername").value = formData.gitlabUsername || '';
+        document.getElementById("bitbucketUsername").value = formData.bitbucketUsername || '';
     }
 }
 
