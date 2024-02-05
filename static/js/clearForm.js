@@ -52,6 +52,9 @@ function clearForm() {
 
     // Update live preview after clearing the form
     updateLivePreview();
+
+    // Save the cleared form data to localStorage
+    saveFormData();
 }
 
 // Event listener for the "Clear Form" button
