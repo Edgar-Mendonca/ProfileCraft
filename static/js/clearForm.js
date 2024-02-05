@@ -46,9 +46,19 @@ function clearForm() {
 
     // Clear input values for Connect with me section
     document.getElementById("githubUsername").value = "";
-    document.getElementById("twitterUsername").value = "";
     document.getElementById("youtubeUsername").value = "";
+    document.getElementById("twitterUsername").value = "";
+    document.getElementById("linkedinUsername").value = "";
+    document.getElementById("facebookUsername").value = "";
     document.getElementById("instagramUsername").value = "";
+    document.getElementById("stackoverflowUsername").value = "";
+    document.getElementById("rssFeed").value = "";
+    document.getElementById("devtoUsername").value = "";
+    document.getElementById("mediumUsername").value = "";
+    document.getElementById("codepenUsername").value = "";
+    document.getElementById("codesandboxUsername").value = "";
+    document.getElementById("gitlabUsername").value = "";
+    document.getElementById("bitbucketUsername").value = "";
 
     // Update live preview after clearing the form
     updateLivePreview();
