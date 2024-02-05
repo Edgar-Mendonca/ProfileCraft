@@ -1,53 +1,3 @@
-function toggleInputFields(checkboxId, textInputId, urlInputId) {
-    const checkbox = document.getElementById(checkboxId);
-    const textInput = document.getElementById(textInputId);
-    const urlInput = document.getElementById(urlInputId);
-
-    textInput.disabled = !checkbox.checked;
-    urlInput.disabled = !checkbox.checked;
-}
-
-document.getElementById("enableWorkingOn").addEventListener("change", function () {
-    toggleInputFields("enableWorkingOn", "workingOnText", "workingOnURL");
-});
-
-document.getElementById("enableCollaborate").addEventListener("change", function () {
-    toggleInputFields("enableCollaborate", "collaborateText", "collaborateURL");
-});
-
-document.getElementById("enableHelpWith").addEventListener("change", function () {
-    toggleInputFields("enableHelpWith", "helpWithText", "helpWithURL");
-});
-
-document.getElementById("enableLearning").addEventListener("change", function () {
-    toggleInputFields("enableLearning", "learningText", "learningURL");
-});
-
-document.getElementById("enableAskMe").addEventListener("change", function () {
-    toggleInputFields("enableAskMe", "askMeText", "askMeURL");
-});
-
-document.getElementById("enableReachMe").addEventListener("change", function () {
-    toggleInputFields("enableReachMe", "reachMeText", "reachMeURL");
-});
-
-document.getElementById("enableProjects").addEventListener("change", function () {
-    toggleInputFields("enableProjects", "projectsText", "projectsURL");
-});
-
-document.getElementById("enableArticles").addEventListener("change", function () {
-    toggleInputFields("enableArticles", "articlesText", "articlesURL");
-});
-
-document.getElementById("enableExperiences").addEventListener("change", function () {
-    toggleInputFields("enableExperiences", "experiencesText", "experiencesURL");
-});
-
-document.getElementById("enableFunFact").addEventListener("change", function () {
-    toggleInputFields("enableFunFact", "funFactText", null);
-});
-
-
 // Function to generate the README content
 function generateReadmeContent() {
     // Collect user input values
@@ -55,139 +5,258 @@ function generateReadmeContent() {
     const fullName = document.getElementById("fullName").value;
     const aboutMe = document.getElementById("aboutMe").value;
 
-    // Working On
-    const includeWorkingOn = document.getElementById("enableWorkingOn").checked;
+    // Collect user input values for Working On section
     const workingOnText = document.getElementById("workingOnText").value;
     const workingOnURL = document.getElementById("workingOnURL").value;
 
-    // Collaborate
-    const includeCollaborate = document.getElementById("enableCollaborate").checked;
+    // Collect user input values for Collaborate section
     const collaborateText = document.getElementById("collaborateText").value;
     const collaborateURL = document.getElementById("collaborateURL").value;
 
-    // Help With
-    const includeHelpWith = document.getElementById("enableHelpWith").checked;
+    // Collect user input values for Help With section
     const helpWithText = document.getElementById("helpWithText").value;
     const helpWithURL = document.getElementById("helpWithURL").value;
 
-    // Learning
-    const includeLearning = document.getElementById("enableLearning").checked;
+    // Collect user input values for Learning section
     const learningText = document.getElementById("learningText").value;
     const learningURL = document.getElementById("learningURL").value;
 
-    // Ask Me
-    const includeAskMe = document.getElementById("enableAskMe").checked;
+    // Collect user input values for Ask Me section
     const askMeText = document.getElementById("askMeText").value;
     const askMeURL = document.getElementById("askMeURL").value;
 
-    // Reach Me
-    const includeReachMe = document.getElementById("enableReachMe").checked;
+    // Collect user input values for Reach Me section
     const reachMeText = document.getElementById("reachMeText").value;
     const reachMeURL = document.getElementById("reachMeURL").value;
 
-    // Projects
-    const includeProjects = document.getElementById("enableProjects").checked;
+    // Collect user input values for Projects section
     const projectsText = document.getElementById("projectsText").value;
     const projectsURL = document.getElementById("projectsURL").value;
 
-    // Articles
-    const includeArticles = document.getElementById("enableArticles").checked;
+    // Collect user input values for Articles section
     const articlesText = document.getElementById("articlesText").value;
     const articlesURL = document.getElementById("articlesURL").value;
 
-    // Experiences
-    const includeExperiences = document.getElementById("enableExperiences").checked;
+    // Collect user input values for Experiences section
     const experiencesText = document.getElementById("experiencesText").value;
     const experiencesURL = document.getElementById("experiencesURL").value;
 
-    // Fun Fact
-    const includeFunFact = document.getElementById("enableFunFact").checked;
+    // Collect user input values for Fun Fact section
     const funFactText = document.getElementById("funFactText").value;
+
+    // Collect user input values for Connect with me section
+    const githubUsername = document.getElementById("githubUsername").value;
+    const youtubeUsername = document.getElementById("youtubeUsername").value;
+
+    const twitterUsername = document.getElementById("twitterUsername").value;
+    const linkedinUsername = document.getElementById("linkedinUsername").value;
+
+    const facebookUsername = document.getElementById("facebookUsername").value;
+    const instagramUsername = document.getElementById("instagramUsername").value;
+
+    const stackoverflowUsername = document.getElementById("stackoverflowUsername").value;
+    const rssFeed = document.getElementById("rssFeed").value;
+
+    const devtoUsername = document.getElementById("devtoUsername").value;
+    const mediumUsername = document.getElementById("mediumUsername").value;
+
+    const codepenUsername = document.getElementById("codepenUsername").value;
+    const codesandboxUsername = document.getElementById("codesandboxUsername").value;
+
+    const gitlabUsername = document.getElementById("gitlabUsername").value;
+    const bitbucketUsername = document.getElementById("bitbucketUsername").value;
+
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
     readmeContent += `![Profile Views](https://komarev.com/ghpvc/?username=${username}&color=green)\n\n`;
-    readmeContent += `## About Me\n${aboutMe ? aboutMe : 'Add a brief description about yourself.'}\n\n`;
+    readmeContent += `## 📝 About Me\n${aboutMe ? aboutMe : 'Add a brief description about yourself.'}\n\n`;
 
-    if (includeWorkingOn) {
-        readmeContent += `## 🔭 I’m currently working on\n`;
-        readmeContent += `- ${workingOnText ? workingOnText : 'Describe your current projects'} `;
-        readmeContent += `([${workingOnURL ? 'Link' : 'Add link'}](${workingOnURL ? workingOnURL : ''}))\n\n`;
+    // Working On
+    if (workingOnText || workingOnURL) {
+        readmeContent += `## 🛠️ I’m currently working on\n`;
+        readmeContent += `${workingOnText ? `${workingOnText}` : ''}${workingOnURL ? ` ([${workingOnURL}](${workingOnURL}))` : ''}\n\n`;
     }
 
-    if (includeCollaborate) {
-        readmeContent += `## 👯 I’m looking to collaborate on\n`;
-        readmeContent += `- ${collaborateText ? collaborateText : 'Specify areas you\'re interested in collaborating'} `;
-        readmeContent += `([${collaborateURL ? 'Link' : 'Add link'}](${collaborateURL ? collaborateURL : ''}))\n\n`;
+    // Collaborate
+    if (collaborateText || collaborateURL) {
+        readmeContent += `## 🧑‍🤝‍🧑 I’m looking to collaborate on\n`;
+        readmeContent += `${collaborateText ? `${collaborateText}` : ''}${collaborateURL ? ` ([${collaborateURL}](${collaborateURL}))` : ''}\n\n`;
     }
 
-    if (includeHelpWith) {
-        readmeContent += `## 🤝 I’m looking for help with\n`;
-        readmeContent += `- ${helpWithText ? helpWithText : 'Describe what you need help with'} `;
-        readmeContent += `([${helpWithURL ? 'Link' : 'Add link'}](${helpWithURL ? helpWithURL : ''}))\n\n`;
+    // Help With
+    if (helpWithText || helpWithURL) {
+        readmeContent += `## 💁 I’m looking for help with\n`;
+        readmeContent += `${helpWithText ? `${helpWithText}` : ''}${helpWithURL ? ` ([${helpWithURL}](${helpWithURL}))` : ''}\n\n`;
     }
 
-    if (includeLearning) {
-        readmeContent += `## 🌱 I’m currently learning\n`;
-        readmeContent += `- ${learningText ? learningText : 'List topics or technologies you are currently learning'} `;
-        readmeContent += `([${learningURL ? 'Link' : 'Add link'}](${learningURL ? learningURL : ''}))\n\n`;
+    // Learning
+    if (learningText || learningURL) {
+        readmeContent += `## 📒 I’m currently learning\n`;
+        readmeContent += `${learningText ? `${learningText}` : ''}${learningURL ? ` ([${learningURL}](${learningURL}))` : ''}\n\n`;
     }
 
-    if (includeAskMe) {
+    // Ask Me
+    if (askMeText || askMeURL) {
         readmeContent += `## 💬 Ask me about\n`;
-        readmeContent += `- ${askMeText ? askMeText : 'What topics are you knowledgeable about?'} `;
-        readmeContent += `([${askMeURL ? 'Link' : 'Add link'}](${askMeURL ? askMeURL : ''}))\n\n`;
+        readmeContent += `${askMeText ? `${askMeText}` : ''}${askMeURL ? ` ([${askMeURL}](${askMeURL}))` : ''}\n\n`;
     }
 
-    if (includeReachMe) {
-        readmeContent += `## 📫 How to reach me\n`;
-        readmeContent += `- ${reachMeText ? reachMeText : 'Provide contact information or social media links'} `;
-        readmeContent += `([${reachMeURL ? 'Link' : 'Add link'}](${reachMeURL ? reachMeURL : ''}))\n\n`;
+    // Reach Me
+    if (reachMeText || reachMeURL) {
+        readmeContent += `## 📬 How to reach me\n`;
+        readmeContent += `${reachMeText ? `${reachMeText}` : ''}${reachMeURL ? ` ([${reachMeURL}](${reachMeURL}))` : ''}\n\n`;
     }
 
-    if (includeProjects) {
-        readmeContent += `## 👨‍💻 All of my projects are available at\n`;
-        readmeContent += `- ${projectsText ? projectsText : 'Share links to your GitHub repositories'} `;
-        readmeContent += `([${projectsURL ? 'Link' : 'Add link'}](${projectsURL ? projectsURL : ''}))\n\n`;
+    // Projects
+    if (projectsText || projectsURL) {
+        readmeContent += `## 💻 All of my projects are available at\n`;
+        readmeContent += `${projectsText ? `${projectsText}` : ''}${projectsURL ? ` ([${projectsURL}](${projectsURL}))` : ''}\n\n`;
     }
 
-    if (includeArticles) {
-        readmeContent += `## 📝 I regularly write articles on\n`;
-        readmeContent += `- ${articlesText ? articlesText : 'Link to your blog or articles'} `;
-        readmeContent += `([${articlesURL ? 'Link' : 'Add link'}](${articlesURL ? articlesURL : ''}))\n\n`;
+    // Articles
+    if (articlesText || articlesURL) {
+        readmeContent += `## ✍️ I regularly write articles on\n`;
+        readmeContent += `${articlesText ? `${articlesText}` : ''}${articlesURL ? ` ([${articlesURL}](${articlesURL}))` : ''}\n\n`;
     }
 
-    if (includeExperiences) {
-        readmeContent += `## 📄 Know about my experiences\n`;
-        readmeContent += `- ${experiencesText ? experiencesText : 'Share details about your experiences'} `;
-        readmeContent += `([${experiencesURL ? 'Link' : 'Add link'}](${experiencesURL ? experiencesURL : ''}))\n\n`;
+    // Experiences
+    if (experiencesText || experiencesURL) {
+        readmeContent += `## 🧑‍💼 Know about my experiences\n`;
+        readmeContent += `${experiencesText ? `${experiencesText}` : ''}${experiencesURL ? ` ([${experiencesURL}](${experiencesURL}))` : ''}\n\n`;
     }
 
-    if (includeFunFact) {
-        readmeContent += `## ⚡ Fun fact\n`;
-        readmeContent += `- ${funFactText ? funFactText : 'Share an interesting fact about yourself'}\n\n`;
+    // Fun Fact
+    if (funFactText) {
+        readmeContent += `## 💡 Fun fact\n`;
+        readmeContent += `${funFactText}\n\n`;
     }
+
+    // Connect with me
+    readmeContent += `## 🔗 Connect with me\n`;
+
+    if (githubUsername) {
+        readmeContent += `<a href="https://github.com/${githubUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/material-outlined/48/github.png" alt="github"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (youtubeUsername) {
+        readmeContent += `<a href="https://www.youtube.com/${youtubeUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/youtube-play.png" alt="youtube-play"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (twitterUsername) {
+        readmeContent += `<a href="https://twitter.com/${twitterUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v1.png" alt="twitterx--v1"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (linkedinUsername) {
+        readmeContent += `<a href="https://linkedin.com/${linkedinUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/linkedin.png" alt="linkedin"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (facebookUsername) {
+        readmeContent += `<a href="https://www.facebook.com/${facebookUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/fluency/48/000000/facebook-new.png" alt="facebook-new"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (instagramUsername) {
+        readmeContent += `<a href="https://www.instagram.com/${instagramUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/instagram-new--v1.png" alt="instagram-new--v1"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (stackoverflowUsername) {
+        readmeContent += `<a href="https://stackoverflow.com/${stackoverflowUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/stackoverflow.png" alt="stackoverflow"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (rssFeed) {
+        readmeContent += `<a href="https://rss.com/${rssFeed}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/rss.png" alt="rss"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (devtoUsername) {
+        readmeContent += `<a href="https://dev.to/${devtoUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/windows/48/dev.png" alt="dev"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (mediumUsername) {
+        readmeContent += `<a href="https://medium.com/${mediumUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/medium-logo.png" alt="medium-logo"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (codepenUsername) {
+        readmeContent += `<a href="https://codepen.io/${codepenUsername}" target="_blank"><img width="50" height="50" src="https://img.icons8.com/ios-filled/50/codepen.png" alt="codepen"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (codesandboxUsername) {
+        readmeContent += `<a href="https://codesandbox.io/${codesandboxUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-codesandbox-an-online-code-editor-and-sharing-web-application-projects-logo-color-tal-revivo.png" alt="external-codesandbox-an-online-code-editor-and-sharing-web-application-projects-logo-color-tal-revivo"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    if (gitlabUsername) {
+        readmeContent += `<a href="https://gitlab.com/${gitlabUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/gitlab.png" alt="gitlab"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+    if (bitbucketUsername) {
+        readmeContent += `<a href="https://bitbucket.org/${bitbucketUsername}" target="_blank"><img width="48" height="48" src="https://img.icons8.com/external-tal-revivo-shadow-tal-revivo/48/external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo.png" alt="external-bitbucket-is-a-web-based-version-control-repository-hosting-service-logo-shadow-tal-revivo"/></a>&nbsp;&nbsp;&nbsp;`;
+    }
+
+    readmeContent += `\n\n`;
 
     return readmeContent;
 }
 
 // Function to update the live preview
 function updateLivePreview() {
-    const previewContent = generateReadmeContent();
-    document.getElementById("livePreview").innerText = previewContent;
-    
-    // Enable the Download README button
-    document.getElementById("downloadReadmeBtn").disabled = false;
+    const livePreview = document.getElementById("livePreview");
+    const readmeContent = generateReadmeContent();
+    livePreview.textContent = readmeContent;
 }
 
-// Function to update the live preview
-function updateLivePreview() {
-    const previewContent = generateReadmeContent();
-    document.getElementById("livePreview").innerText = previewContent;
-    
-    // Enable the Download README button
-    document.getElementById("downloadReadmeBtn").disabled = false;
-}
+// Event listener for input changes in the "About Me" section
+document.getElementById("aboutMe").addEventListener("input", updateLivePreview);
+
+// Event listener for input changes in the "Username and Full Name" sections
+document.getElementById("username").addEventListener("input", updateLivePreview);
+document.getElementById("fullName").addEventListener("input", updateLivePreview);
+
+// Event listener for input changes in the "Profile Highlights" sections
+document.getElementById("workingOnText").addEventListener("input", updateLivePreview); 
+document.getElementById("workingOnURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("collaborateText").addEventListener("input", updateLivePreview); 
+document.getElementById("collaborateURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("helpWithText").addEventListener("input", updateLivePreview); 
+document.getElementById("helpWithURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("learningText").addEventListener("input", updateLivePreview); 
+document.getElementById("learningURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("askMeText").addEventListener("input", updateLivePreview); 
+document.getElementById("askMeURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("reachMeText").addEventListener("input", updateLivePreview); 
+document.getElementById("reachMeURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("projectsText").addEventListener("input", updateLivePreview); 
+document.getElementById("projectsURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("articlesText").addEventListener("input", updateLivePreview); 
+document.getElementById("articlesURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("experiencesText").addEventListener("input", updateLivePreview); 
+document.getElementById("experiencesURL").addEventListener("input", updateLivePreview);
+
+document.getElementById("funFactText").addEventListener("input", updateLivePreview); 
+
+// Event listeners for input changes in the "Connect with me" section
+document.getElementById("githubUsername").addEventListener("input", updateLivePreview);
+document.getElementById("youtubeUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("twitterUsername").addEventListener("input", updateLivePreview);
+document.getElementById("linkedinUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("facebookUsername").addEventListener("input", updateLivePreview);
+document.getElementById("instagramUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("stackoverflowUsername").addEventListener("input", updateLivePreview);
+document.getElementById("rssFeed").addEventListener("input", updateLivePreview);
+
+document.getElementById("devtoUsername").addEventListener("input", updateLivePreview);
+document.getElementById("mediumUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("codepenUsername").addEventListener("input", updateLivePreview);
+document.getElementById("codesandboxUsername").addEventListener("input", updateLivePreview);
+
+document.getElementById("gitlabUsername").addEventListener("input", updateLivePreview);
+document.getElementById("bitbucketUsername").addEventListener("input", updateLivePreview);
+
+// Initial live preview update
+updateLivePreview();
 
 // Function to download the README
 function downloadReadme() {
@@ -201,65 +270,106 @@ function downloadReadme() {
     document.body.removeChild(link);
 }
 
-// Event listeners for input changes
-document.getElementById("enableWorkingOn").addEventListener("change", function () {
-    toggleInputFields("enableWorkingOn", "workingOnText", "workingOnURL");
-    updateLivePreview();
-});
 
-document.getElementById("enableCollaborate").addEventListener("change", function () {
-    toggleInputFields("enableCollaborate", "collaborateText", "collaborateURL");
-    updateLivePreview();
-});
+// Function to save form data to localStorage
+function saveFormData() {
+    const formData = {
+        username: document.getElementById("username").value,
+        fullName: document.getElementById("fullName").value,
+        aboutMe: document.getElementById("aboutMe").value,
+        workingOnText: document.getElementById("workingOnText").value,
+        workingOnURL: document.getElementById("workingOnURL").value,
+        collaborateText: document.getElementById("collaborateText").value,
+        collaborateURL: document.getElementById("collaborateURL").value,
+        helpWithText: document.getElementById("helpWithText").value,
+        helpWithURL: document.getElementById("helpWithURL").value,
+        learningText: document.getElementById("learningText").value,
+        learningURL: document.getElementById("learningURL").value,
+        askMeText: document.getElementById("askMeText").value,
+        askMeURL: document.getElementById("askMeURL").value,
+        reachMeText: document.getElementById("reachMeText").value,
+        reachMeURL: document.getElementById("reachMeURL").value,
+        projectsText: document.getElementById("projectsText").value,
+        projectsURL: document.getElementById("projectsURL").value,
+        articlesText: document.getElementById("articlesText").value,
+        articlesURL: document.getElementById("articlesURL").value,
+        experiencesText: document.getElementById("experiencesText").value,
+        experiencesURL: document.getElementById("experiencesURL").value,
+        funFactText: document.getElementById("funFactText").value,
+        
+        githubUsername: document.getElementById("githubUsername").value,
+        youtubeUsername: document.getElementById("youtubeUsername").value,
 
-document.getElementById("enableHelpWith").addEventListener("change", function () {
-    toggleInputFields("enableHelpWith", "helpWithText", "helpWithURL");
-    updateLivePreview();
-});
+        twitterUsername: document.getElementById("twitterUsername").value,
+        linkedinUsername: document.getElementById("linkedinUsername").value,
 
-document.getElementById("enableLearning").addEventListener("change", function () {
-    toggleInputFields("enableLearning", "learningText", "learningURL");
-    updateLivePreview();
-});
+        facebookUsername: document.getElementById("facebookUsername").value,
+        instagramUsername: document.getElementById("instagramUsername").value,
 
-document.getElementById("enableAskMe").addEventListener("change", function () {
-    toggleInputFields("enableAskMe", "askMeText", "askMeURL");
-    updateLivePreview();
-});
+        stackoverflowUsername: document.getElementById("stackoverflowUsername").value,
+        rssFeed: document.getElementById("rssFeed").value,
 
-document.getElementById("enableReachMe").addEventListener("change", function () {
-    toggleInputFields("enableReachMe", "reachMeText", "reachMeURL");
-    updateLivePreview();
-});
+        devtoUsername: document.getElementById("devtoUsername").value,
+        mediumUsername: document.getElementById("mediumUsername").value,
 
-document.getElementById("enableProjects").addEventListener("change", function () {
-    toggleInputFields("enableProjects", "projectsText", "projectsURL");
-    updateLivePreview();
-});
+        codepenUsername: document.getElementById("codepenUsername").value,
+        codesandboxUsername: document.getElementById("codesandboxUsername").value,
 
-document.getElementById("enableArticles").addEventListener("change", function () {
-    toggleInputFields("enableArticles", "articlesText", "articlesURL");
-    updateLivePreview();
-});
+        gitlabUsername: document.getElementById("gitlabUsername").value,
+        bitbucketUsername: document.getElementById("bitbucketUsername").value,
 
-document.getElementById("enableExperiences").addEventListener("change", function () {
-    toggleInputFields("enableExperiences", "experiencesText", "experiencesURL");
-    updateLivePreview();
-});
+    };
 
-document.getElementById("enableFunFact").addEventListener("change", function () {
-    toggleInputFields("enableFunFact", "funFactText", null);
-    updateLivePreview();
-});
+    localStorage.setItem('formData', JSON.stringify(formData));
+}
 
+// Function to load form data from localStorage
+function loadFormData() {
+    const savedFormData = localStorage.getItem('formData');
 
+    if (savedFormData) {
+        const formData = JSON.parse(savedFormData);
 
-
-// Event listener for the "Generate README" button
-document.getElementById("generateReadmeBtn").addEventListener("click", function () {
-    downloadReadme();
-});
+        document.getElementById("username").value = formData.username || '';
+        document.getElementById("fullName").value = formData.fullName || '';
+        document.getElementById("aboutMe").value = formData.aboutMe || '';
+        document.getElementById("workingOnText").value = formData.workingOnText || '';
+        document.getElementById("workingOnURL").value = formData.workingOnURL || '';
+        document.getElementById("collaborateText").value = formData.collaborateText || '';
+        document.getElementById("collaborateURL").value = formData.collaborateURL || '';
+        document.getElementById("helpWithText").value = formData.helpWithText || '';
+        document.getElementById("helpWithURL").value = formData.helpWithURL || '';
+        document.getElementById("learningText").value = formData.learningText || '';
+        document.getElementById("learningURL").value = formData.learningURL || '';
+        document.getElementById("askMeText").value = formData.askMeText || '';
+        document.getElementById("askMeURL").value = formData.askMeURL || '';
+        document.getElementById("reachMeText").value = formData.reachMeText || '';
+        document.getElementById("reachMeURL").value = formData.reachMeURL || '';
+        document.getElementById("projectsText").value = formData.projectsText || '';
+        document.getElementById("projectsURL").value = formData.projectsURL || '';
+        document.getElementById("articlesText").value = formData.articlesText || '';
+        document.getElementById("articlesURL").value = formData.articlesURL || '';
+        document.getElementById("experiencesText").value = formData.experiencesText || '';
+        document.getElementById("experiencesURL").value = formData.experiencesURL || '';
+        document.getElementById("funFactText").value = formData.funFactText || '';
+        document.getElementById("githubUsername").value = formData.githubUsername || '';
+        document.getElementById("youtubeUsername").value = formData.youtubeUsername || '';
+        document.getElementById("twitterUsername").value = formData.twitterUsername || '';
+        document.getElementById("linkedinUsername").value = formData.linkedinUsername || '';
+        document.getElementById("facebookUsername").value = formData.facebookUsername || '';
+        document.getElementById("instagramUsername").value = formData.instagramUsername || '';
+        document.getElementById("stackoverflowUsername").value = formData.stackoverflowUsername || '';
+        document.getElementById("rssFeed").value = formData.rssFeed || '';
+        document.getElementById("devtoUsername").value = formData.devtoUsername || '';
+        document.getElementById("mediumUsername").value = formData.mediumUsername || '';
+        document.getElementById("codepenUsername").value = formData.codepenUsername || '';
+        document.getElementById("codesandboxUsername").value = formData.codesandboxUsername || '';
+        document.getElementById("gitlabUsername").value = formData.gitlabUsername || '';
+        document.getElementById("bitbucketUsername").value = formData.bitbucketUsername || '';
+    }
+}
 
 // Initial live preview update
 updateLivePreview();
-
+// Load form data when the page is loaded
+loadFormData();
