@@ -66,6 +66,11 @@ function generateReadmeContent() {
     const gitlabUsername = document.getElementById("gitlabUsername").value;
     const bitbucketUsername = document.getElementById("bitbucketUsername").value;
 
+    // Collect user input values for Skills Seection
+    // Collect user input values for programming languages Subsection
+    const selectedLanguages = getSelectedLanguages(); // Get selected programming languages
+
+
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
@@ -186,8 +191,66 @@ function generateReadmeContent() {
 
     readmeContent += `\n\n`;
 
+    // Add Skills section
+    readmeContent += `## ✨ Skills\n`;
+    // Add Programming Languages section
+    if (selectedLanguages.length > 0) {
+        readmeContent += '### Programming Languages\n\n';
+        selectedLanguages.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+
     return readmeContent;
 }
+
+
+// Function to get selected programming languages
+function getSelectedLanguages() {
+    const selectedLanguages = [];
+    const programmingLanguages = [
+        { id: "programmingLanguageC", name: "C", icon: "https://img.icons8.com/color/48/000000/c-programming.png" },
+        { id: "programmingLanguageCpp", name: "C++", icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" },
+        { id: "programmingLanguageCSharp", name: "C#", icon: "https://img.icons8.com/color/48/000000/c-sharp-logo.png" },
+        { id: "programmingLanguageJava", name: "Java", icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" },
+
+        { id: "programmingLanguagePython", name: "Python", icon: "https://img.icons8.com/color/48/000000/python.png" },
+        { id: "programmingLanguageJavaScript", name: "JavaScript", icon: "https://img.icons8.com/color/48/000000/javascript.png" },
+        { id: "programmingLanguageRuby", name: "Ruby", icon: "https://img.icons8.com/color/48/000000/ruby-programming-language.png" },
+        { id: "programmingLanguageSwift", name: "Swift", icon: "https://img.icons8.com/color/48/000000/swift.png" },
+
+        { id: "programmingLanguagePHP", name: "PHP", icon: "https://img.icons8.com/officexs/48/000000/php-logo.png" },
+        { id: "programmingLanguageTypeScript", name: "TypeScript", icon: "https://img.icons8.com/color/48/000000/typescript.png" },
+        { id: "programmingLanguageGo", name: "Go", icon: "https://img.icons8.com/color/48/000000/golang.png" },
+        { id: "programmingLanguageRust", name: "Rust", icon: "https://img.icons8.com/color/48/rust-programming-language.png" },
+
+        { id: "programmingLanguageKotlin", name: "Kotlin", icon: "https://img.icons8.com/color/48/000000/kotlin.png" },
+        { id: "programmingLanguageScala", name: "Scala", icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-scala-a-general-purpose-programming-language-with-strong-static-type-system-logo-color-tal-revivo.png" },
+        { id: "programmingLanguageHaskell", name: "Haskell", icon: "https://img.icons8.com/color/48/000000/haskell.png" },
+        { id: "programmingLanguageLua", name: "Lua", icon: "https://img.icons8.com/color/48/lua-language.png" },
+
+        { id: "programmingLanguageElixir", name: "Elixir", icon: "https://www.vectorlogo.zone/logos/elixir-lang/elixir-lang-icon.svg" },
+        { id: "programmingLanguageErlang", name: "Erlang", icon: "https://www.vectorlogo.zone/logos/erlang/erlang-icon.svg" },
+        { id: "programmingLanguageCoffeeScript", name: "CoffeeScript", icon: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/external-coffeescript-is-a-little-language-that-compiles-into-javascript-logo-bold-tal-revivo.png" },
+        { id: "programmingLanguageObjectiveC", name: "ObjectiveC", icon: "https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg" },
+
+
+
+    ]; // Define programming languages
+
+    programmingLanguages.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedLanguages.push(language);
+        }
+    });
+
+    return selectedLanguages;
+}
+
+
+
 
 // Function to update the live preview
 function updateLivePreview() {
@@ -254,6 +317,14 @@ document.getElementById("codesandboxUsername").addEventListener("input", updateL
 
 document.getElementById("gitlabUsername").addEventListener("input", updateLivePreview);
 document.getElementById("bitbucketUsername").addEventListener("input", updateLivePreview);
+
+// Event listeners for input changes in the "Programming Languages" section
+const programmingLanguagesCheckboxes = document.querySelectorAll(".form-check-input");
+programmingLanguagesCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+
 
 // Initial live preview update
 updateLivePreview();
