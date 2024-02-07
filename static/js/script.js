@@ -389,6 +389,9 @@ function saveFormData() {
         gitlabUsername: document.getElementById("gitlabUsername").value,
         bitbucketUsername: document.getElementById("bitbucketUsername").value,
 
+        // Include Programming Languages
+        selectedLanguages: getSelectedLanguages()
+
     };
 
     localStorage.setItem('formData', JSON.stringify(formData));
@@ -423,6 +426,7 @@ function loadFormData() {
         document.getElementById("experiencesText").value = formData.experiencesText || '';
         document.getElementById("experiencesURL").value = formData.experiencesURL || '';
         document.getElementById("funFactText").value = formData.funFactText || '';
+
         document.getElementById("githubUsername").value = formData.githubUsername || '';
         document.getElementById("youtubeUsername").value = formData.youtubeUsername || '';
         document.getElementById("twitterUsername").value = formData.twitterUsername || '';
@@ -437,6 +441,16 @@ function loadFormData() {
         document.getElementById("codesandboxUsername").value = formData.codesandboxUsername || '';
         document.getElementById("gitlabUsername").value = formData.gitlabUsername || '';
         document.getElementById("bitbucketUsername").value = formData.bitbucketUsername || '';
+
+        // Load selected programming languages
+        const selectedLanguages = formData.selectedLanguages || [];
+        selectedLanguages.forEach(language => {
+            const checkbox = document.getElementById(language.id);
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+        });
+
     }
 }
 

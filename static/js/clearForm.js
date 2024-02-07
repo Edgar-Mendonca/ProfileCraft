@@ -60,6 +60,41 @@ function clearForm() {
     document.getElementById("gitlabUsername").value = "";
     document.getElementById("bitbucketUsername").value = "";
 
+    // Clear selected programming languages
+    const programmingLanguages = [
+        "programmingLanguageC",
+        "programmingLanguageCpp",
+        "programmingLanguageCSharp",
+        "programmingLanguageJava",
+
+        "programmingLanguagePython",
+        "programmingLanguageJavaScript",
+        "programmingLanguageRuby",
+        "programmingLanguageSwift",
+
+        "programmingLanguagePHP",
+        "programmingLanguageTypeScript",
+        "programmingLanguageGo",
+        "programmingLanguageRust",
+
+        "programmingLanguageKotlin",
+        "programmingLanguageScala",
+        "programmingLanguageHaskell",
+        "programmingLanguageLua",
+
+        "programmingLanguageElixir",
+        "programmingLanguageErlang",
+        "programmingLanguageCoffeeScript",
+        "programmingLanguageObjectiveC",
+    ];
+
+    programmingLanguages.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
     // Update live preview after clearing the form
     updateLivePreview();
 
