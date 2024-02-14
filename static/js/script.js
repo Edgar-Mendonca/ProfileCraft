@@ -70,6 +70,11 @@ function generateReadmeContent() {
     const selectedProgrammingLanguages = getSelectedProgrammingLanguages(); 
     const selectedFrontend = getSelectedFrontend(); 
     const selectedBackend = getSelectedBackend();
+    const selectedAIML = getSelectedAIML();
+
+
+
+
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
@@ -216,6 +221,15 @@ function generateReadmeContent() {
         });
         readmeContent += '\n\n';
     }
+    // Add AI/ML section
+    if (selectedAIML.length > 0) {
+        readmeContent += '### AI/ML\n\n';
+        selectedAIML.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+
 
     return readmeContent;
 }
@@ -283,8 +297,6 @@ function getSelectedFrontend() {
         { id: "frontendLanguagePugJS", name: "pugjs", icon: "https://img.icons8.com/color/48/000000/pug.png" },
         { id: "frontendLanguageRedux", name: "redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
         { id: "frontendLanguageBulma", name: "bulma", icon: "https://vectorwiki.com/images/ZzFcA__bulma.svg" },
-
-
     ]; // Define Frontend languages
 
     frontendLanguages.forEach(language => {
@@ -316,7 +328,6 @@ function getSelectedBackend() {
         { id: "backendLanguageRabbitMQ", name: "rabbitmq", icon: "https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" },
         { id: "backendLanguageHadoop", name: "hadoop", icon: "https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" },
         { id: "backendLanguageOpenResty", name: "openresty", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/2054198fb91ff060760931956c11d906409c0955/static/icons/openresty.svg" },
-
     ]; // Define Backend languages
 
     backendLanguages.forEach(language => {
@@ -328,6 +339,38 @@ function getSelectedBackend() {
 
     return selectedBackend;
 }
+
+
+
+// Function to get selected AI/ML
+function getSelectedAIML() {
+    const selectedAIML = [];
+    const aiMl = [
+        { id: "aiMlTensorflow", name: "tensorflow", icon: "https://img.icons8.com/color/48/000000/tensorflow.png" },
+        { id: "aiMlPytorch", name: "pytorch", icon: "https://img.icons8.com/fluency/48/pytorch.png" },
+
+        { id: "aiMlPandas", name: "pandas", icon: "https://img.icons8.com/color/48/000000/pandas.png" },
+        { id: "aiMlScikitLearn", name: "scikitLearn", icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
+
+    ]; // Define Backend languages
+
+    aiMl.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedAIML.push(language);
+        }
+    });
+
+    return selectedAIML;
+}
+
+
+
+
+
+
+
+
 
 
 
@@ -417,6 +460,11 @@ backendLanguageCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 
+// Event listeners for input changes in the "AI/ML" section
+const aiMlCheckboxes = document.querySelectorAll(".form-check-input");
+aiMlCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
 
 
 
