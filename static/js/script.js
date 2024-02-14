@@ -66,11 +66,9 @@ function generateReadmeContent() {
     const gitlabUsername = document.getElementById("gitlabUsername").value;
     const bitbucketUsername = document.getElementById("bitbucketUsername").value;
 
-    // Collect user input values for Skills Seection
-    // Collect user input values for programming languages Subsection
-    const selectedLanguages = getSelectedLanguages(); // Get selected programming languages
-
-
+    // Collect user input values for Skills Section
+    const selectedProgrammingLanguages = getSelectedProgrammingLanguages(); // Get selected programming languages
+    const selectedFrontend = getSelectedFrontend(); // Get selected frontend development languages
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
@@ -194,9 +192,17 @@ function generateReadmeContent() {
     // Add Skills section
     readmeContent += `## ✨ Skills\n`;
     // Add Programming Languages section
-    if (selectedLanguages.length > 0) {
+    if (selectedProgrammingLanguages.length > 0) {
         readmeContent += '### Programming Languages\n\n';
-        selectedLanguages.forEach(language => {
+        selectedProgrammingLanguages.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+    // Add Frontend Development section
+    if (selectedFrontend.length > 0) {
+        readmeContent += '### Frontend Development\n\n';
+        selectedFrontend.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
         readmeContent += '\n\n';
@@ -205,9 +211,8 @@ function generateReadmeContent() {
     return readmeContent;
 }
 
-
 // Function to get selected programming languages
-function getSelectedLanguages() {
+function getSelectedProgrammingLanguages() {
     const selectedLanguages = [];
     const programmingLanguages = [
         { id: "programmingLanguageC", name: "C", icon: "https://img.icons8.com/color/48/000000/c-programming.png" },
@@ -234,9 +239,6 @@ function getSelectedLanguages() {
         { id: "programmingLanguageErlang", name: "Erlang", icon: "https://www.vectorlogo.zone/logos/erlang/erlang-icon.svg" },
         { id: "programmingLanguageCoffeeScript", name: "CoffeeScript", icon: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/external-coffeescript-is-a-little-language-that-compiles-into-javascript-logo-bold-tal-revivo.png" },
         { id: "programmingLanguageObjectiveC", name: "ObjectiveC", icon: "https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg" },
-
-
-
     ]; // Define programming languages
 
     programmingLanguages.forEach(language => {
@@ -248,6 +250,39 @@ function getSelectedLanguages() {
 
     return selectedLanguages;
 }
+
+// Function to get selected Frontend Development languages
+function getSelectedFrontend() {
+    const selectedFrontend = [];
+    const frontendLanguages = [
+        { id: "frontendLanguageHTML", name: "HTML", icon: "https://img.icons8.com/color/48/000000/html-5.png" },
+        { id: "frontendLanguageCSS", name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png" },
+        { id: "frontendLanguageReact", name: "React", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
+        { id: "frontendLanguageVue", name: "Vue", icon: "https://img.icons8.com/color/48/000000/vue-js.png" },
+
+        { id: "frontendLanguageAngular", name: "angular", icon: "https://img.icons8.com/color/48/000000/angularjs.png" },
+        { id: "frontendLanguageBootstrap", name: "bootstrap", icon: "https://img.icons8.com/color/48/000000/bootstrap.png" },
+        { id: "frontendLanguageMaterialize", name: "materialize", icon: "https://img.icons8.com/color/48/000000/m.png" },
+        { id: "frontendLanguageTailwind", name: "tailwind", icon: "https://img.icons8.com/color/48/tailwind_css.png" },
+
+        { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original-wordmark.svg" },
+        { id: "frontendLanguageBackboneJS", name: "backbonejs", icon: "https://www.vectorlogo.zone/logos/backbonejs/backbonejs-icon.svg" },
+        { id: "frontendLanguageVuetify", name: "vuetify", icon: "" },
+        { id: "frontendLanguageSass", name: "sass", icon: "https://img.icons8.com/color/48/000000/sass.png" },
+
+
+    ]; // Define Frontend languages
+
+    frontendLanguages.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedFrontend.push(language);
+        }
+    });
+
+    return selectedFrontend;
+}
+
 
 
 
@@ -323,6 +358,13 @@ const programmingLanguagesCheckboxes = document.querySelectorAll(".form-check-in
 programmingLanguagesCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
+
+// Event listeners for input changes in the " Frontend Development" section
+const frontendLanguageCheckboxes = document.querySelectorAll(".form-check-input");
+frontendLanguageCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
 
 
 

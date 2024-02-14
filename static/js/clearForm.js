@@ -95,6 +95,32 @@ function clearForm() {
         }
     });
 
+    // Clear selected Frontend Development languages
+    const frontendLanguages = [
+        "frontendLanguageHTML",
+        "frontendLanguageCSS",
+        "frontendLanguageReact",
+        "frontendLanguageVue",
+
+        "frontendLanguageAngular",
+        "frontendLanguageBootstrap",
+        "frontendLanguageMaterialize",
+        "frontendLanguageTailwind",
+
+
+    ];
+
+    frontendLanguages.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+
+
+
     // Update live preview after clearing the form
     updateLivePreview();
 
