@@ -127,6 +127,34 @@ function clearForm() {
 
 
 
+    // Clear selected Backend Development languages
+    const backendLanguages = [
+        "backendLanguageNodeJS",
+        "backendLanguageExpressJS",
+        "backendLanguageDjango",
+        "backendLanguageFlask",
+
+        "backendLanguageSpring",
+        "backendLanguageGraphQL",
+        "backendLanguageKafka",
+        "backendLanguageNestJS",
+
+        "backendLanguageSolr",
+        "backendLanguageRabbitMQ",
+        "backendLanguageHadoop",
+        "backendLanguageOpenResty",
+
+    ];
+
+    backendLanguages.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+
 
 
     // Update live preview after clearing the form

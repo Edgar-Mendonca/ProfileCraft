@@ -67,8 +67,9 @@ function generateReadmeContent() {
     const bitbucketUsername = document.getElementById("bitbucketUsername").value;
 
     // Collect user input values for Skills Section
-    const selectedProgrammingLanguages = getSelectedProgrammingLanguages(); // Get selected programming languages
-    const selectedFrontend = getSelectedFrontend(); // Get selected frontend development languages
+    const selectedProgrammingLanguages = getSelectedProgrammingLanguages(); 
+    const selectedFrontend = getSelectedFrontend(); 
+    const selectedBackend = getSelectedBackend();
 
     // Construct README content
     let readmeContent = `# ${fullName ? fullName : username}\n\n`;
@@ -207,6 +208,14 @@ function generateReadmeContent() {
         });
         readmeContent += '\n\n';
     }
+    // Add Backend Development section
+    if (selectedBackend.length > 0) {
+        readmeContent += '### Backend Development\n\n';
+        selectedBackend.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
 
     return readmeContent;
 }
@@ -289,6 +298,38 @@ function getSelectedFrontend() {
 }
 
 
+// Function to get selected Backend Development languages
+function getSelectedBackend() {
+    const selectedBackend = [];
+    const backendLanguages = [
+        { id: "backendLanguageNodeJS", name: "nodejs", icon: "https://img.icons8.com/color/48/000000/nodejs.png" },
+        { id: "backendLanguageExpressJS", name: "expressjs", icon: "https://img.icons8.com/ios/50/express-js.png" },
+        { id: "backendLanguageDjango", name: "django", icon: "https://img.icons8.com/color/48/000000/django.png" },
+        { id: "backendLanguageFlask", name: "flask", icon: "https://img.icons8.com/color/48/000000/flask.png" },
+
+        { id: "backendLanguageSpring", name: "spring", icon: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg" },
+        { id: "backendLanguageGraphQL", name: "graphql", icon: "https://img.icons8.com/color/48/000000/graphql.png" },
+        { id: "backendLanguageKafka", name: "kafka", icon: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" },
+        { id: "backendLanguageNestJS", name: "nestjs", icon: "https://img.icons8.com/color/48/000000/nestjs.png" },
+
+        { id: "backendLanguageSolr", name: "solr", icon: "https://www.vectorlogo.zone/logos/apache_solr/apache_solr-icon.svg" },
+        { id: "backendLanguageRabbitMQ", name: "rabbitmq", icon: "https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" },
+        { id: "backendLanguageHadoop", name: "hadoop", icon: "https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" },
+        { id: "backendLanguageOpenResty", name: "openresty", icon: "https://raw.githubusercontent.com/cncf/landscape/8fc255ff26f50f30f3c69aa66dcc88869e294937/hosted_logos/openresty.svg" },
+
+    ]; // Define Backend languages
+
+    backendLanguages.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedBackend.push(language);
+        }
+    });
+
+    return selectedBackend;
+}
+
+
 
 
 
@@ -364,9 +405,15 @@ programmingLanguagesCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 
-// Event listeners for input changes in the " Frontend Development" section
+// Event listeners for input changes in the "Frontend Development" section
 const frontendLanguageCheckboxes = document.querySelectorAll(".form-check-input");
 frontendLanguageCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "Backend Development" section
+const backendLanguageCheckboxes = document.querySelectorAll(".form-check-input");
+backendLanguageCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 
