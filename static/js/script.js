@@ -267,7 +267,7 @@ function getSelectedFrontend() {
 
         { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original-wordmark.svg" },
         { id: "frontendLanguageBackboneJS", name: "backbonejs", icon: "https://www.vectorlogo.zone/logos/backbonejs/backbonejs-icon.svg" },
-        { id: "frontendLanguageVuetify", name: "vuetify", icon: "" },
+        { id: "frontendLanguageVuetify", name: "vuetify", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/b2e02430c24681c8ca887cce8d57a77c40bb02e6/static/icons/vuetify.svg" },
         { id: "frontendLanguageSass", name: "sass", icon: "https://img.icons8.com/color/48/000000/sass.png" },
 
 
