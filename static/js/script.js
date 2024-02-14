@@ -262,7 +262,7 @@ function getSelectedFrontend() {
 
         { id: "frontendLanguageAngular", name: "angular", icon: "https://img.icons8.com/color/48/000000/angularjs.png" },
         { id: "frontendLanguageBootstrap", name: "bootstrap", icon: "https://img.icons8.com/color/48/000000/bootstrap.png" },
-        { id: "frontendLanguageMaterialize", name: "materialize", icon: "https://img.icons8.com/color/48/000000/m.png" },
+        { id: "frontendLanguageMaterialize", name: "materialize", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8a0ba41b55a2490894e1d09eccac7ccf782abb16/static/icons/materialize.svg" },
         { id: "frontendLanguageTailwind", name: "tailwind", icon: "https://img.icons8.com/color/48/tailwind_css.png" },
 
         { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original-wordmark.svg" },
