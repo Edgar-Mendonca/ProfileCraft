@@ -296,7 +296,7 @@ function getSelectedFrontend() {
         { id: "frontendLanguageSvelte", name: "svelte", icon: "https://www.vectorlogo.zone/logos/sveltetechnology/sveltetechnology-icon.svg" },
         { id: "frontendLanguagePugJS", name: "pugjs", icon: "https://img.icons8.com/color/48/000000/pug.png" },
         { id: "frontendLanguageRedux", name: "redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
-        { id: "frontendLanguageBulma", name: "bulma", icon: "https://vectorwiki.com/images/ZzFcA__bulma.svg" },
+        { id: "frontendLanguageBulma", name: "bulma", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/422e626e4d4ff6aa2cda8cbc4e201ba12309fdf5/static/icons/bulma.svg" },
     ]; // Define Frontend languages
 
     frontendLanguages.forEach(language => {
