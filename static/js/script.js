@@ -315,7 +315,7 @@ function getSelectedBackend() {
         { id: "backendLanguageSolr", name: "solr", icon: "https://www.vectorlogo.zone/logos/apache_solr/apache_solr-icon.svg" },
         { id: "backendLanguageRabbitMQ", name: "rabbitmq", icon: "https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" },
         { id: "backendLanguageHadoop", name: "hadoop", icon: "https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" },
-        { id: "backendLanguageOpenResty", name: "openresty", icon: "https://raw.githubusercontent.com/cncf/landscape/8fc255ff26f50f30f3c69aa66dcc88869e294937/hosted_logos/openresty.svg" },
+        { id: "backendLanguageOpenResty", name: "openresty", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/2054198fb91ff060760931956c11d906409c0955/static/icons/openresty.svg" },
 
     ]; // Define Backend languages
 
