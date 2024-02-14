@@ -107,7 +107,15 @@ function clearForm() {
         "frontendLanguageMaterialize",
         "frontendLanguageTailwind",
 
+        "frontendLanguageAngularJS",
+        "frontendLanguageBackboneJS",
+        "frontendLanguageVuetify",
+        "frontendLanguageSass",
 
+        "frontendLanguageSvelte",
+        "frontendLanguagePugJS",
+        "frontendLanguageRedux",
+        "frontendLanguageBulma",
     ];
 
     frontendLanguages.forEach(languageId => {

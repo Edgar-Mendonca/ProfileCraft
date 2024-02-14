@@ -265,10 +265,15 @@ function getSelectedFrontend() {
         { id: "frontendLanguageMaterialize", name: "materialize", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8a0ba41b55a2490894e1d09eccac7ccf782abb16/static/icons/materialize.svg" },
         { id: "frontendLanguageTailwind", name: "tailwind", icon: "https://img.icons8.com/color/48/tailwind_css.png" },
 
-        { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original-wordmark.svg" },
+        { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/c46702fc15f871acb4945b950e16235859404f48/static/icons/AngularJS.svg" },
         { id: "frontendLanguageBackboneJS", name: "backbonejs", icon: "https://www.vectorlogo.zone/logos/backbonejs/backbonejs-icon.svg" },
         { id: "frontendLanguageVuetify", name: "vuetify", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/b2e02430c24681c8ca887cce8d57a77c40bb02e6/static/icons/vuetify.svg" },
         { id: "frontendLanguageSass", name: "sass", icon: "https://img.icons8.com/color/48/000000/sass.png" },
+
+        { id: "frontendLanguageSvelte", name: "svelte", icon: "https://www.vectorlogo.zone/logos/sveltetechnology/sveltetechnology-icon.svg" },
+        { id: "frontendLanguagePugJS", name: "pugjs", icon: "https://img.icons8.com/color/48/000000/pug.png" },
+        { id: "frontendLanguageRedux", name: "redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
+        { id: "frontendLanguageBulma", name: "bulma", icon: "https://vectorwiki.com/images/ZzFcA__bulma.svg" },
 
 
     ]; // Define Frontend languages
