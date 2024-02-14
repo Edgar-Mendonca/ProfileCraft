@@ -350,7 +350,7 @@ function getSelectedAIML() {
         { id: "aiMlPytorch", name: "pytorch", icon: "https://img.icons8.com/fluency/48/pytorch.png" },
 
         { id: "aiMlPandas", name: "pandas", icon: "https://img.icons8.com/color/48/000000/pandas.png" },
-        { id: "aiMlScikitLearn", name: "scikitLearn", icon: "https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" },
+        { id: "aiMlScikitLearn", name: "scikitLearn", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/afdeb7b34f41113a54290e91e8ab401c34e969f1/static/icons/Scikit_learn.svg" },
 
     ]; // Define Backend languages
 
@@ -363,16 +363,6 @@ function getSelectedAIML() {
 
     return selectedAIML;
 }
-
-
-
-
-
-
-
-
-
-
 
 
 

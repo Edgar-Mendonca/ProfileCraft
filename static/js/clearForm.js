@@ -143,7 +143,6 @@ function clearForm() {
         "backendLanguageRabbitMQ",
         "backendLanguageHadoop",
         "backendLanguageOpenResty",
-
     ];
 
     backendLanguages.forEach(languageId => {
@@ -153,6 +152,22 @@ function clearForm() {
         }
     });
 
+
+    // Clear selected AI/ML
+    const aiMl = [
+        "aiMlTensorflow",
+        "aiMlPytorch",
+
+        "aiMlPandas",
+        "aiMlScikitLearn",
+    ];
+
+    aiMl.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
 
 
 
