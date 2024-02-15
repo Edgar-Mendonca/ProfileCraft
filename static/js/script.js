@@ -401,9 +401,15 @@ function getSelectedDatabase() {
 
 // Function to update the live preview
 function updateLivePreview() {
+    const codePreview = document.getElementById("codePreview");
     const livePreview = document.getElementById("livePreview");
     const readmeContent = generateReadmeContent();
-    livePreview.textContent = readmeContent;
+
+    // Display code in the "Code" tab
+    codePreview.textContent = readmeContent;
+
+    // Render Markdown content as HTML in the "Live Preview" tab
+    livePreview.innerHTML = marked(readmeContent);
 }
 
 // Event listener for input changes in the "About Me" section
