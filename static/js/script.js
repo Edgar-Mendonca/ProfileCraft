@@ -71,6 +71,8 @@ function generateReadmeContent() {
     const selectedFrontend = getSelectedFrontend(); 
     const selectedBackend = getSelectedBackend();
     const selectedAIML = getSelectedAIML();
+    const selectedDatabase = getSelectedDatabase();
+
 
 
 
@@ -229,6 +231,14 @@ function generateReadmeContent() {
         });
         readmeContent += '\n\n';
     }
+    // Add Database section
+    if (selectedDatabase.length > 0) {
+        readmeContent += '### Database\n\n';
+        selectedDatabase.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
 
 
     return readmeContent;
@@ -340,8 +350,6 @@ function getSelectedBackend() {
     return selectedBackend;
 }
 
-
-
 // Function to get selected AI/ML
 function getSelectedAIML() {
     const selectedAIML = [];
@@ -352,7 +360,7 @@ function getSelectedAIML() {
         { id: "aiMlPandas", name: "pandas", icon: "https://img.icons8.com/color/48/000000/pandas.png" },
         { id: "aiMlScikitLearn", name: "scikitLearn", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/afdeb7b34f41113a54290e91e8ab401c34e969f1/static/icons/Scikit_learn.svg" },
 
-    ]; // Define Backend languages
+    ]; // Define AI/ML
 
     aiMl.forEach(language => {
         const checkbox = document.getElementById(language.id);
@@ -364,6 +372,31 @@ function getSelectedAIML() {
     return selectedAIML;
 }
 
+
+
+
+
+// Function to get Database
+function getSelectedDatabase() {
+    const selectedDatabase = [];
+    const database = [
+        { id: "databaseMongoDB", name: "mongodb", icon: "https://img.icons8.com/color/48/000000/mongodb.png" },
+        { id: "databaseMySQL", name: "databaseMySQL", icon: "https://img.icons8.com/color/48/000000/mysql.png" },
+
+        { id: "databasePostgreSQL", name: "databasePostgreSQL", icon: "https://img.icons8.com/color/48/000000/postgreesql.png" },
+        { id: "databaseSQLite", name: "databaseSQLite", icon: "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" },
+
+    ]; // Define Database
+
+    database.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedDatabase.push(language);
+        }
+    });
+
+    return selectedDatabase;
+}
 
 
 // Function to update the live preview
@@ -455,6 +488,15 @@ const aiMlCheckboxes = document.querySelectorAll(".form-check-input");
 aiMlCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
+
+// Event listeners for input changes in the "Database" section
+const databaseCheckboxes = document.querySelectorAll(".form-check-input");
+databaseCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+
+
 
 
 

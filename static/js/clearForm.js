@@ -170,6 +170,27 @@ function clearForm() {
     });
 
 
+    // Clear selected Database
+    const database = [
+        "databaseMongoDB",
+        "databaseMySQL",
+
+        "databasePostgreSQL",
+        "databaseSQLite",
+    ];
+
+    database.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+
+
+
+
 
 
     // Update live preview after clearing the form
