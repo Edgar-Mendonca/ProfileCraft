@@ -415,7 +415,7 @@ function getSelectedFramework() {
         { id: "frameworkFlask", name: "flask", icon: "https://img.icons8.com/color/48/000000/flask.png" },
 
         { id: "frameworkDotNet", name: "dotnet", icon: "https://www.vectorlogo.zone/logos/dotnet/dotnet-icon.svg" },
-        { id: "frameworkRails", name: "rails", icon: "https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" },
+        { id: "frameworkRails", name: "rails", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/24997877abcc2bea4f51b913621a85d284d2a72f/static/icons/Ruby_On_Rails.svg" },
 
     ]; // Define Framework
 
