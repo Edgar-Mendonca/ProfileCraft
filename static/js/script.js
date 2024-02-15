@@ -72,6 +72,8 @@ function generateReadmeContent() {
     const selectedBackend = getSelectedBackend();
     const selectedAIML = getSelectedAIML();
     const selectedDatabase = getSelectedDatabase();
+    const selectedFramework = getSelectedFramework();
+
 
 
 
@@ -239,6 +241,14 @@ function generateReadmeContent() {
         });
         readmeContent += '\n\n';
     }
+    // Add Framework section
+    if (selectedFramework.length > 0) {
+        readmeContent += '### Framework\n\n';
+        selectedFramework.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
 
 
     return readmeContent;
@@ -373,9 +383,6 @@ function getSelectedAIML() {
 }
 
 
-
-
-
 // Function to get Database
 function getSelectedDatabase() {
     const selectedDatabase = [];
@@ -397,6 +404,44 @@ function getSelectedDatabase() {
 
     return selectedDatabase;
 }
+
+
+
+// Function to get Framework
+function getSelectedFramework() {
+    const selectedFramework = [];
+    const framework = [
+        { id: "frameworkDjango", name: "django", icon: "https://img.icons8.com/color/48/000000/django.png" },
+        { id: "frameworkFlask", name: "flask", icon: "https://img.icons8.com/color/48/000000/flask.png" },
+
+        { id: "frameworkDotNet", name: "dotnet", icon: "https://www.vectorlogo.zone/logos/dotnet/dotnet-icon.svg" },
+        { id: "frameworkRails", name: "rails", icon: "https://upload.wikimedia.org/wikipedia/commons/6/62/Ruby_On_Rails_Logo.svg" },
+
+    ]; // Define Framework
+
+    framework.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedFramework.push(language);
+        }
+    });
+
+    return selectedFramework;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // Function to update the live preview
@@ -498,6 +543,12 @@ aiMlCheckboxes.forEach(checkbox => {
 // Event listeners for input changes in the "Database" section
 const databaseCheckboxes = document.querySelectorAll(".form-check-input");
 databaseCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "Framework" section
+const frameworkCheckboxes = document.querySelectorAll(".form-check-input");
+frameworkCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 

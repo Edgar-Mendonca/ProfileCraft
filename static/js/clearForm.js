@@ -188,6 +188,28 @@ function clearForm() {
 
 
 
+    // Clear selected Framework
+    const framework = [
+        "frameworkDjango",
+        "frameworkFlask",
+
+        "frameworkDotNet",
+        "frameworkRails",
+    ];
+
+    framework.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+
+
+
+
+
 
 
 
