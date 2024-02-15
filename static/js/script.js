@@ -75,6 +75,8 @@ function generateReadmeContent() {
     const selectedFramework = getSelectedFramework();
     const selectedSiteGenerators = getSelectedSiteGenerators();
     const selectedSoftwares = getSelectedSoftwares();
+    const selectedDevops = getSelectedDevops();
+
 
 
 
@@ -261,6 +263,14 @@ function generateReadmeContent() {
     if (selectedSoftwares.length > 0) {
         readmeContent += '### Softwares\n\n';
         selectedSoftwares.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+    // Add Devops section
+    if (selectedDevops.length > 0) {
+        readmeContent += '### Devops\n\n';
+        selectedDevops.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
         readmeContent += '\n\n';
@@ -504,6 +514,39 @@ function getSelectedSoftwares() {
 
 
 
+// Function to get Devops
+function getSelectedDevops() {
+    const selectedDevops = [];
+    const devops = [
+        { id: "devopsToolDocker", name: "docker", icon: "https://img.icons8.com/color/48/000000/docker.png" },
+        { id: "devopsToolKubernetes", name: "kubernetes", icon: "https://img.icons8.com/color/48/000000/kubernetes.png" },
+        { id: "devopsToolJenkins", name: "jenkins", icon: "https://img.icons8.com/color/48/000000/jenkins.png" },
+        { id: "devopsToolAnsible", name: "ansible", icon: "https://img.icons8.com/color/48/000000/ansible.png" },
+
+        { id: "devopsToolTerraform", name: "terraform", icon: "https://img.icons8.com/color/48/000000/terraform.png" },
+        { id: "devopsToolGitLab", name: "gitlab", icon: "https://img.icons8.com/color/48/000000/gitlab.png" },
+        { id: "devopsToolBitbucket", name: "bitbucket", icon: "https://img.icons8.com/color/48/000000/bitbucket.png" },
+        { id: "devopsToolCircleCI", name: "circleci", icon: "https://img.icons8.com/color/48/000000/circleci.png" },
+
+        { id: "devopsToolAWS", name: "aws", icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png" },
+        { id: "devopsToolAzure", name: "azure", icon: "https://img.icons8.com/color/48/000000/azure-1.png" },
+        { id: "devopsToolGCP", name: "gcp", icon: "https://img.icons8.com/color/48/000000/google-cloud-platform.png" },
+        { id: "devopsToolVagrant", name: "vagrant", icon: "https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg" },
+    ]; // Define Devops
+
+    devops.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedDevops.push(language);
+        }
+    });
+
+    return selectedDevops;
+}
+
+
+
+
 
 
 
@@ -633,6 +676,12 @@ siteGeneratorsCheckboxes.forEach(checkbox => {
 // Event listeners for input changes in the "Softwares" section
 const softwaresCheckboxes = document.querySelectorAll(".form-check-input");
 softwaresCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "Devops" section
+const devopsCheckboxes = document.querySelectorAll(".form-check-input");
+devopsCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 

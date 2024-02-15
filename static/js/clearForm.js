@@ -225,7 +225,6 @@ function clearForm() {
     });
 
 
-
     // Clear selected Softwares
     const softwares = [
         "softwareIllustrator",
@@ -245,6 +244,32 @@ function clearForm() {
     ];
 
     softwares.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+    // Clear selected Devops
+    const devops = [
+        "devopsToolDocker",
+        "devopsToolKubernetes",
+        "devopsToolJenkins",
+        "devopsToolAnsible",
+
+        "devopsToolTerraform",
+        "devopsToolGitLab",
+        "devopsToolBitbucket",
+        "devopsToolCircleCI",
+
+        "devopsToolAWS",
+        "devopsToolAzure",
+        "devopsToolGCP",
+        "devopsToolVagrant",
+    ];
+
+    devops.forEach(languageId => {
         const checkbox = document.getElementById(languageId);
         if (checkbox) {
             checkbox.checked = false;
