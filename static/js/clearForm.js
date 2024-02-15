@@ -204,7 +204,6 @@ function clearForm() {
     });
 
 
-
     // Clear selected Site Generators
     const siteGenerators = [
         "siteGeneratorJekyll",
@@ -219,6 +218,33 @@ function clearForm() {
     ];
 
     siteGenerators.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+
+    // Clear selected Softwares
+    const softwares = [
+        "softwareIllustrator",
+        "softwarePhotoshop",
+        "softwarePremierPro",
+        "softwareXD",
+
+        "softwareFigma",
+        "softwareBlender",
+        "softwareAfterEffects",
+        "softwareSketch",
+
+        "softwareGIMP",
+        "softwareInkscape",
+        "softwareUnity",
+        "softwareInVision",
+    ];
+
+    softwares.forEach(languageId => {
         const checkbox = document.getElementById(languageId);
         if (checkbox) {
             checkbox.checked = false;

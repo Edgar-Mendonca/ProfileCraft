@@ -74,9 +74,7 @@ function generateReadmeContent() {
     const selectedDatabase = getSelectedDatabase();
     const selectedFramework = getSelectedFramework();
     const selectedSiteGenerators = getSelectedSiteGenerators();
-
-
-
+    const selectedSoftwares = getSelectedSoftwares();
 
 
 
@@ -255,6 +253,14 @@ function generateReadmeContent() {
     if (selectedSiteGenerators.length > 0) {
         readmeContent += '### Site Generators\n\n';
         selectedSiteGenerators.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+    // Add Softwares section
+    if (selectedSoftwares.length > 0) {
+        readmeContent += '### Softwares\n\n';
+        selectedSoftwares.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
         readmeContent += '\n\n';
@@ -439,7 +445,6 @@ function getSelectedFramework() {
 }
 
 
-
 // Function to get Site Generators
 function getSelectedSiteGenerators() {
     const selectedSiteGenerators = [];
@@ -463,6 +468,37 @@ function getSelectedSiteGenerators() {
     });
 
     return selectedSiteGenerators;
+}
+
+
+// Function to get Softwares
+function getSelectedSoftwares() {
+    const selectedSoftwares = [];
+    const softwares = [
+        { id: "softwareIllustrator", name: "illustrator", icon: "https://img.icons8.com/color/48/000000/adobe-illustrator.png" },
+        { id: "softwarePhotoshop", name: "photoshop", icon: "https://img.icons8.com/color/48/000000/adobe-photoshop.png" },
+        { id: "softwarePremierPro", name: "premierPro", icon: "https://img.icons8.com/color/48/000000/adobe-premiere-pro.png" },
+        { id: "softwareXD", name: "xd", icon: "https://img.icons8.com/color/48/000000/adobe-xd.png" },
+
+        { id: "softwareFigma", name: "figma", icon: "https://img.icons8.com/color/48/000000/figma--v1.png" },
+        { id: "softwareBlender", name: "blender", icon: "https://img.icons8.com/color/48/000000/blender-3d.png" },
+        { id: "softwareAfterEffects", name: "afterEffects", icon: "https://img.icons8.com/color/48/000000/adobe-after-effects.png" },
+        { id: "softwareSketch", name: "sketch", icon: "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg" },
+
+        { id: "softwareGIMP", name: "gimp", icon: "https://img.icons8.com/color/48/000000/gimp.png" },
+        { id: "softwareInkscape", name: "inkscape", icon: "https://img.icons8.com/color/48/000000/inkscape.png" },
+        { id: "softwareUnity", name: "unity", icon: "https://img.icons8.com/color/48/000000/unity.png" },
+        { id: "softwareInVision", name: "invision", icon: "https://www.vectorlogo.zone/logos/invisionapp/invisionapp-icon.svg" },
+    ]; // Define Softwares
+
+    softwares.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedSoftwares.push(language);
+        }
+    });
+
+    return selectedSoftwares;
 }
 
 
@@ -591,6 +627,12 @@ frameworkCheckboxes.forEach(checkbox => {
 // Event listeners for input changes in the "Site Generators" section
 const siteGeneratorsCheckboxes = document.querySelectorAll(".form-check-input");
 siteGeneratorsCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "Softwares" section
+const softwaresCheckboxes = document.querySelectorAll(".form-check-input");
+softwaresCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 
