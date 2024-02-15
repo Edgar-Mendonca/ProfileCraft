@@ -187,7 +187,6 @@ function clearForm() {
     });
 
 
-
     // Clear selected Framework
     const framework = [
         "frameworkDjango",
@@ -198,6 +197,32 @@ function clearForm() {
     ];
 
     framework.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+
+
+
+
+
+    // Clear selected Site Generators
+    const siteGenerators = [
+        "siteGeneratorJekyll",
+        "siteGeneratorHugo",
+        "siteGeneratorGatsby",
+        "siteGeneratorHexo",
+
+        "siteGeneratorPelican",
+        "siteGeneratorVuePress",
+        "siteGeneratorNextJS",
+        "siteGeneratorMkdocs",
+    ];
+
+    siteGenerators.forEach(languageId => {
         const checkbox = document.getElementById(languageId);
         if (checkbox) {
             checkbox.checked = false;

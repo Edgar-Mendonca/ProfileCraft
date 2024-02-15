@@ -73,6 +73,8 @@ function generateReadmeContent() {
     const selectedAIML = getSelectedAIML();
     const selectedDatabase = getSelectedDatabase();
     const selectedFramework = getSelectedFramework();
+    const selectedSiteGenerators = getSelectedSiteGenerators();
+
 
 
 
@@ -249,6 +251,14 @@ function generateReadmeContent() {
         });
         readmeContent += '\n\n';
     }
+    // Add Site Generators section
+    if (selectedSiteGenerators.length > 0) {
+        readmeContent += '### Framework\n\n';
+        selectedSiteGenerators.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
 
 
     return readmeContent;
@@ -406,7 +416,6 @@ function getSelectedDatabase() {
 }
 
 
-
 // Function to get Framework
 function getSelectedFramework() {
     const selectedFramework = [];
@@ -427,6 +436,33 @@ function getSelectedFramework() {
     });
 
     return selectedFramework;
+}
+
+
+
+// Function to get Site Generators
+function getSelectedSiteGenerators() {
+    const selectedSiteGenerators = [];
+    const siteGenerators = [
+        { id: "siteGeneratorJekyll", name: "jekyll", icon: "https://www.vectorlogo.zone/logos/jekyllrb/jekyllrb-icon.svg" },
+        { id: "siteGeneratorHugo", name: "hugo", icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Logo_of_Hugo_the_static_website_generator.svg" },
+        { id: "siteGeneratorGatsby", name: "gatsby", icon: "https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" },
+        { id: "siteGeneratorHexo", name: "hexo", icon: "https://www.vectorlogo.zone/logos/hexoio/hexoio-icon.svg" },
+
+        { id: "siteGeneratorPelican", name: "pelican", icon: "https://getpelican.com/theme/img/logo.svg" },
+        { id: "siteGeneratorVuePress", name: "vuepress", icon: "https://img.icons8.com/color/48/000000/vue-js.png" },
+        { id: "siteGeneratorNextJS", name: "nextjs", icon: "https://upload.vectorlogo.zone/logos/nextjs/images/2d3864ef-00e0-4026-ab1d-30e4a98e2899.svg" },
+        { id: "siteGeneratorMkdocs", name: "mkdocs", icon: "https://img.icons8.com/color/48/000000/markdown.png" },
+    ]; // Define Site Generators
+
+    siteGenerators.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedSiteGenerators.push(language);
+        }
+    });
+
+    return selectedSiteGenerators;
 }
 
 
@@ -549,6 +585,12 @@ databaseCheckboxes.forEach(checkbox => {
 // Event listeners for input changes in the "Framework" section
 const frameworkCheckboxes = document.querySelectorAll(".form-check-input");
 frameworkCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "Site Generators" section
+const siteGeneratorsCheckboxes = document.querySelectorAll(".form-check-input");
+siteGeneratorsCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 
