@@ -253,7 +253,7 @@ function generateReadmeContent() {
     }
     // Add Site Generators section
     if (selectedSiteGenerators.length > 0) {
-        readmeContent += '### Framework\n\n';
+        readmeContent += '### Site Generators\n\n';
         selectedSiteGenerators.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
@@ -445,13 +445,13 @@ function getSelectedSiteGenerators() {
     const selectedSiteGenerators = [];
     const siteGenerators = [
         { id: "siteGeneratorJekyll", name: "jekyll", icon: "https://www.vectorlogo.zone/logos/jekyllrb/jekyllrb-icon.svg" },
-        { id: "siteGeneratorHugo", name: "hugo", icon: "https://upload.wikimedia.org/wikipedia/commons/a/af/Logo_of_Hugo_the_static_website_generator.svg" },
+        { id: "siteGeneratorHugo", name: "hugo", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5c940dbf0928e98183d5b004e1c619609c6e35d5/static/icons/Hugo.svg" },
         { id: "siteGeneratorGatsby", name: "gatsby", icon: "https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" },
         { id: "siteGeneratorHexo", name: "hexo", icon: "https://www.vectorlogo.zone/logos/hexoio/hexoio-icon.svg" },
 
-        { id: "siteGeneratorPelican", name: "pelican", icon: "https://getpelican.com/theme/img/logo.svg" },
+        { id: "siteGeneratorPelican", name: "pelican", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5c940dbf0928e98183d5b004e1c619609c6e35d5/static/icons/pelican.svg" },
         { id: "siteGeneratorVuePress", name: "vuepress", icon: "https://img.icons8.com/color/48/000000/vue-js.png" },
-        { id: "siteGeneratorNextJS", name: "nextjs", icon: "https://upload.vectorlogo.zone/logos/nextjs/images/2d3864ef-00e0-4026-ab1d-30e4a98e2899.svg" },
+        { id: "siteGeneratorNextJS", name: "nextjs", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5c940dbf0928e98183d5b004e1c619609c6e35d5/static/icons/Nextjs.svg" },
         { id: "siteGeneratorMkdocs", name: "mkdocs", icon: "https://img.icons8.com/color/48/000000/markdown.png" },
     ]; // Define Site Generators
 

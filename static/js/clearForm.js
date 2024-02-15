@@ -205,10 +205,6 @@ function clearForm() {
 
 
 
-
-
-
-
     // Clear selected Site Generators
     const siteGenerators = [
         "siteGeneratorJekyll",
