@@ -561,7 +561,7 @@ function getSelectedBaas() {
         { id: "baasServiceFirebase", name: "firebase", icon: "https://img.icons8.com/color/48/000000/firebase.png" },
         { id: "baasServiceHeroku", name: "heroku", icon: "https://img.icons8.com/color/48/000000/heroku.png" },
 
-        { id: "baasServiceStrapi", name: "strapi", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/strapi-icon.svg" },
+        { id: "baasServiceStrapi", name: "strapi", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/f6cca8f9065e60f8d4a2d35c7af2cc1022f52d4e/static/icons/strapi.svg" },
         { id: "baasServiceAppwrite", name: "appwrite", icon: "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" },
 
     ]; // Define Devops
