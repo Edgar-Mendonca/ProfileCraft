@@ -2,12 +2,15 @@
 
 ProfileCraft is a dynamic GitHub Readme Generator that enables users to effortlessly create personalized and visually appealing GitHub profiles. With ProfileCraft, you can showcase your current projects, collaboration interests, areas you need help with, learning endeavours, and much more.
 
+
 ## Features
 
-- **Dynamic Profile Generation**: Generate personalized GitHub profile READMEs with ease.
-- **Customization Options**: Choose from a variety of templates and customize your profile layout.
-- **Real-time Preview**: See changes in real-time as you edit your profile information.
-- **Simple to Use**: Intuitive interface makes it easy for users of all skill levels.
+- **Dynamic Profile Generation**: Easily generate personalized GitHub profile READMEs with a wide range of sections and customizable inputs.
+- **Real-time Preview**: View markdown code and a live preview of your GitHub profile README as you make changes, allowing you to visualize the final result instantly.
+- **Interactive UI**: Enjoy an interactive user interface that guides you through the process of creating and customizing your GitHub profile.
+- **Ease of Use**: Intuitive interface makes it effortless for users of all skill levels to create and customize their GitHub profile with ease.
+- **Versatile Templates**: Choose from a variety of templates to suit your preferences and showcase your projects and skills effectively. (Coming Soon)
+
 
 ## Built Using
 
@@ -26,6 +29,13 @@ ProfileCraft is built using the following technologies:
 ## Installation
 
 To use ProfileCraft, simply visit [ProfileCraft](https://edgar-mendonca.github.io/ProfileCraft/) and follow the instructions on the website.
+
+
+## Issues
+
+🐛[Report Bug](https://github.com/Edgar-Mendonca/ProfileCraft/issues/new?assignees=&labels=bug&projects=&template=bug_report.md&title=)
+💡[Request Features](https://github.com/Edgar-Mendonca/ProfileCraft/issues/new?assignees=&labels=enhancement&projects=&template=feature-request.md&title=)
+
 
 ## Support
 
