@@ -88,67 +88,67 @@ function generateReadmeContent() {
 
 
     // Construct README content
-    let readmeContent = `# ${fullName ? fullName : username}\n\n`;
+    let readmeContent = `# Hello, I'm ${fullName ? fullName : username} 👋\n\n`;
     readmeContent += `![Profile Views](https://komarev.com/ghpvc/?username=${username}&color=green)\n\n`;
     readmeContent += `## 📝 About Me\n${aboutMe ? aboutMe : 'Add a brief description about yourself.'}\n\n`;
 
     // Working On
     if (workingOnText || workingOnURL) {
-        readmeContent += `## 🛠️ I’m currently working on\n`;
+        readmeContent += `### 🛠️ I’m currently working on `;
         readmeContent += `${workingOnText ? `${workingOnText}` : ''}${workingOnURL ? ` ([${workingOnURL}](${workingOnURL}))` : ''}\n\n`;
     }
 
     // Collaborate
     if (collaborateText || collaborateURL) {
-        readmeContent += `## 🧑‍🤝‍🧑 I’m looking to collaborate on\n`;
+        readmeContent += `### 🧑‍🤝‍🧑 I’m looking to collaborate on `;
         readmeContent += `${collaborateText ? `${collaborateText}` : ''}${collaborateURL ? ` ([${collaborateURL}](${collaborateURL}))` : ''}\n\n`;
     }
 
     // Help With
     if (helpWithText || helpWithURL) {
-        readmeContent += `## 💁 I’m looking for help with\n`;
+        readmeContent += `### 💁 I’m looking for help with `;
         readmeContent += `${helpWithText ? `${helpWithText}` : ''}${helpWithURL ? ` ([${helpWithURL}](${helpWithURL}))` : ''}\n\n`;
     }
 
     // Learning
     if (learningText || learningURL) {
-        readmeContent += `## 📒 I’m currently learning\n`;
+        readmeContent += `### 📒 I’m currently learning `;
         readmeContent += `${learningText ? `${learningText}` : ''}${learningURL ? ` ([${learningURL}](${learningURL}))` : ''}\n\n`;
     }
 
     // Ask Me
     if (askMeText || askMeURL) {
-        readmeContent += `## 💬 Ask me about\n`;
+        readmeContent += `### 💬 Ask me about `;
         readmeContent += `${askMeText ? `${askMeText}` : ''}${askMeURL ? ` ([${askMeURL}](${askMeURL}))` : ''}\n\n`;
     }
 
     // Reach Me
     if (reachMeText || reachMeURL) {
-        readmeContent += `## 📬 How to reach me\n`;
+        readmeContent += `### 📬 How to reach me `;
         readmeContent += `${reachMeText ? `${reachMeText}` : ''}${reachMeURL ? ` ([${reachMeURL}](${reachMeURL}))` : ''}\n\n`;
     }
 
     // Projects
     if (projectsText || projectsURL) {
-        readmeContent += `## 💻 All of my projects are available at\n`;
+        readmeContent += `### 💻 All of my projects are available at `;
         readmeContent += `${projectsText ? `${projectsText}` : ''}${projectsURL ? ` ([${projectsURL}](${projectsURL}))` : ''}\n\n`;
     }
 
     // Articles
     if (articlesText || articlesURL) {
-        readmeContent += `## ✍️ I regularly write articles on\n`;
+        readmeContent += `### ✍️ I regularly write articles on `;
         readmeContent += `${articlesText ? `${articlesText}` : ''}${articlesURL ? ` ([${articlesURL}](${articlesURL}))` : ''}\n\n`;
     }
 
     // Experiences
     if (experiencesText || experiencesURL) {
-        readmeContent += `## 🧑‍💼 Know about my experiences\n`;
+        readmeContent += `### 🧑‍💼 Know about my experiences `;
         readmeContent += `${experiencesText ? `${experiencesText}` : ''}${experiencesURL ? ` ([${experiencesURL}](${experiencesURL}))` : ''}\n\n`;
     }
 
     // Fun Fact
     if (funFactText) {
-        readmeContent += `## 💡 Fun fact\n`;
+        readmeContent += `### 💡 Fun fact\n`;
         readmeContent += `${funFactText}\n\n`;
     }
 
