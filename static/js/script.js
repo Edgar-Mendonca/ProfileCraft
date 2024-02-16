@@ -627,7 +627,7 @@ function getSelectedMobileApp() {
 
 
 // Function to get Other Apps
-function getSelectedMobileApp() {
+function getSelectedOther() {
     const selectedOther = [];
     const otherapp = [
         { id: "otherMatlab", name: "matlab", icon: "https://img.icons8.com/fluency/48/matlab.png" },
