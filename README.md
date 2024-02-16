@@ -34,7 +34,7 @@ If you find ProfileCraft helpful and would like to support its development, you 
 <div align="center">
   <a href="https://www.buymeacoffee.com/your-username">
     <img src="https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/21fc45fc8cce9bc2e10a07acd8185b904bce84dd/static/icons/bmc-button.svg" alt="Buy Me a Coffee" width="171" height="48">
-  </a><a href="https://www.paypal.com/paypalme/your-username">
+  </a>&nbsp;&nbsp;<a href="https://www.paypal.com/paypalme/your-username">
     <img src="https://img.icons8.com/color/48/000000/paypal--v1.png" alt="PayPal" title="PayPal" width="48" height="48">
   </a>
 </div>
