@@ -323,6 +323,10 @@ function clearForm() {
         "otherOctave",
         "otherArduino",
 
+        "otherLinux",
+        "otherGit",
+        "otherRaspberryPi",
+
     ];
 
     otherapp.forEach(languageId => {
