@@ -76,6 +76,8 @@ function generateReadmeContent() {
     const selectedSiteGenerators = getSelectedSiteGenerators();
     const selectedSoftwares = getSelectedSoftwares();
     const selectedDevops = getSelectedDevops();
+    const selectedBaas = getSelectedBaas();
+
 
 
 
@@ -275,6 +277,15 @@ function generateReadmeContent() {
         });
         readmeContent += '\n\n';
     }
+    // Add BaaS section
+    if (selectedBaas.length > 0) {
+        readmeContent += '### BaaS\n\n';
+        selectedBaas.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+
 
 
     return readmeContent;
@@ -512,8 +523,6 @@ function getSelectedSoftwares() {
 }
 
 
-
-
 // Function to get Devops
 function getSelectedDevops() {
     const selectedDevops = [];
@@ -542,6 +551,29 @@ function getSelectedDevops() {
     });
 
     return selectedDevops;
+}
+
+
+// Function to get BaaS
+function getSelectedBaas() {
+    const selectedBaas = [];
+    const baas = [
+        { id: "baasServiceFirebase", name: "firebase", icon: "https://img.icons8.com/color/48/000000/firebase.png" },
+        { id: "baasServiceHeroku", name: "heroku", icon: "https://img.icons8.com/color/48/000000/heroku.png" },
+
+        { id: "baasServiceStrapi", name: "strapi", icon: "https://raw.githubusercontent.com/gilbarbara/logos/52addcaa18dfecb4df77f3ee0753dca6b98187ad/logos/strapi-icon.svg" },
+        { id: "baasServiceAppwrite", name: "appwrite", icon: "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" },
+
+    ]; // Define Devops
+
+    baas.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedBaas.push(language);
+        }
+    });
+
+    return selectedBaas;
 }
 
 
@@ -682,6 +714,12 @@ softwaresCheckboxes.forEach(checkbox => {
 // Event listeners for input changes in the "Devops" section
 const devopsCheckboxes = document.querySelectorAll(".form-check-input");
 devopsCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "BaaS" section
+const baasCheckboxes = document.querySelectorAll(".form-check-input");
+baasCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 

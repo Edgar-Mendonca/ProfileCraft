@@ -277,6 +277,23 @@ function clearForm() {
     });
 
 
+    // Clear selected BaaS
+    const baas = [
+        "baasServiceFirebase",
+        "baasServiceHeroku",
+        
+        "baasServiceStrapi",
+        "baasServiceAppwrite",
+    ];
+
+    baas.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
 
 
 
