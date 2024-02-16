@@ -27,6 +27,14 @@ ProfileCraft is built using the following technologies:
 
 To use ProfileCraft, simply visit [ProfileCraft](https://edgar-mendonca.github.io/ProfileCraft/) and follow the instructions on the website.
 
+## Support
+
+If you find ProfileCraft helpful and would like to support its development, you can contribute by buying me a coffee or donating via PayPal:
+
+- [![Buy Me a Coffee](https://img.icons8.com/color/48/000000/buy-me-a-coffee--v1.png)](https://www.buymeacoffee.com/your-username)
+- [![PayPal](https://img.icons8.com/color/48/000000/paypal--v1.png)](https://www.paypal.com/paypalme/your-username)
+
+
 ## License
 
 ProfileCraft is licensed under the Apache-2.0 License. See the [LICENSE](https://github.com/Edgar-Mendonca/ProfileCraft/blob/main/LICENSE) file for details.
