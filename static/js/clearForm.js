@@ -281,12 +281,35 @@ function clearForm() {
     const baas = [
         "baasServiceFirebase",
         "baasServiceHeroku",
-        
+
         "baasServiceStrapi",
         "baasServiceAppwrite",
     ];
 
     baas.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
+    // Clear selected Mobile App Development
+    const mobileapp = [
+        "mobileAppDevelopmentFlutter",
+        "mobileAppDevelopmentReactNative",
+        
+        "mobileAppDevelopmentKotlin",
+        "mobileAppDevelopmentIOS",
+
+        "mobileAppDevelopmentJava",
+        "mobileAppDevelopmentXamarin",
+
+        "mobileAppDevelopmentIonic",
+        "mobileAppDevelopmentAndroid",
+    ];
+
+    mobileapp.forEach(languageId => {
         const checkbox = document.getElementById(languageId);
         if (checkbox) {
             checkbox.checked = false;

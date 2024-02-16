@@ -77,6 +77,9 @@ function generateReadmeContent() {
     const selectedSoftwares = getSelectedSoftwares();
     const selectedDevops = getSelectedDevops();
     const selectedBaas = getSelectedBaas();
+    const selectedMobileApp = getSelectedMobileApp();
+    const selectedOther = getSelectedOther();
+
 
 
 
@@ -281,6 +284,22 @@ function generateReadmeContent() {
     if (selectedBaas.length > 0) {
         readmeContent += '### BaaS\n\n';
         selectedBaas.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+    // Add Mobile App Development section
+    if (selectedMobileApp.length > 0) {
+        readmeContent += '### Mobile App Development\n\n';
+        selectedMobileApp.forEach(language => {
+            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+        });
+        readmeContent += '\n\n';
+    }
+    // Add Other Apps section
+    if (selectedOther.length > 0) {
+        readmeContent += '### Other Apps\n\n';
+        selectedOther.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
         readmeContent += '\n\n';
@@ -564,7 +583,7 @@ function getSelectedBaas() {
         { id: "baasServiceStrapi", name: "strapi", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/f6cca8f9065e60f8d4a2d35c7af2cc1022f52d4e/static/icons/strapi.svg" },
         { id: "baasServiceAppwrite", name: "appwrite", icon: "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" },
 
-    ]; // Define Devops
+    ]; // Define BaaS
 
     baas.forEach(language => {
         const checkbox = document.getElementById(language.id);
@@ -574,6 +593,65 @@ function getSelectedBaas() {
     });
 
     return selectedBaas;
+}
+
+
+// Function to get Mobile App Development
+function getSelectedMobileApp() {
+    const selectedMobileApp = [];
+    const mobileapp = [
+        { id: "mobileAppDevelopmentFlutter", name: "flutter", icon: "https://img.icons8.com/color/48/000000/flutter.png" },
+        { id: "mobileAppDevelopmentReactNative", name: "reactnative", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
+
+        { id: "mobileAppDevelopmentKotlin", name: "kotlin", icon: "https://img.icons8.com/color/48/000000/kotlin.png" },
+        { id: "mobileAppDevelopmentIOS", name: "ios", icon: "https://img.icons8.com/color/48/000000/ios-logo.png" },
+
+        { id: "mobileAppDevelopmentJava", name: "java", icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" },
+        { id: "mobileAppDevelopmentXamarin", name: "xamarin", icon: "https://img.icons8.com/color/48/000000/xamarin.png" },
+
+        { id: "mobileAppDevelopmentIonic", name: "ionic", icon: "https://img.icons8.com/color/48/000000/ionic.png" },
+        { id: "mobileAppDevelopmentAndroid", name: "android", icon: "https://img.icons8.com/color/48/000000/android-os.png" },
+
+    ]; // Define Mobile App Development
+
+    mobileapp.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedMobileApp.push(language);
+        }
+    });
+
+    return selectedMobileApp;
+}
+
+
+
+// Function to get Other Apps
+function getSelectedMobileApp() {
+    const selectedOther = [];
+    const otherapp = [
+        { id: "mobileAppDevelopmentFlutter", name: "flutter", icon: "https://img.icons8.com/color/48/000000/flutter.png" },
+        { id: "mobileAppDevelopmentReactNative", name: "reactnative", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
+
+        { id: "mobileAppDevelopmentKotlin", name: "kotlin", icon: "https://img.icons8.com/color/48/000000/kotlin.png" },
+        { id: "mobileAppDevelopmentIOS", name: "ios", icon: "https://img.icons8.com/color/48/000000/ios-logo.png" },
+
+        { id: "mobileAppDevelopmentJava", name: "java", icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" },
+        { id: "mobileAppDevelopmentXamarin", name: "xamarin", icon: "https://img.icons8.com/color/48/000000/xamarin.png" },
+
+        { id: "mobileAppDevelopmentIonic", name: "ionic", icon: "https://img.icons8.com/color/48/000000/ionic.png" },
+        { id: "mobileAppDevelopmentAndroid", name: "android", icon: "https://img.icons8.com/color/48/000000/android-os.png" },
+
+    ]; // Define Other Apps
+
+    otherapp.forEach(language => {
+        const checkbox = document.getElementById(language.id);
+        if (checkbox.checked) {
+            selectedOther.push(language);
+        }
+    });
+
+    return selectedOther;
 }
 
 
@@ -723,6 +801,17 @@ baasCheckboxes.forEach(checkbox => {
     checkbox.addEventListener("input", updateLivePreview);
 });
 
+// Event listeners for input changes in the "Mobile App Development" section
+const mobileappCheckboxes = document.querySelectorAll(".form-check-input");
+mobileappCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
+
+// Event listeners for input changes in the "Other Apps" section
+const otherappCheckboxes = document.querySelectorAll(".form-check-input");
+otherappCheckboxes.forEach(checkbox => {
+    checkbox.addEventListener("input", updateLivePreview);
+});
 
 
 
