@@ -32,7 +32,7 @@ To use ProfileCraft, simply visit [ProfileCraft](https://edgar-mendonca.github.i
 If you find ProfileCraft helpful and would like to support its development, you can contribute by buying me a coffee or donating via PayPal:
 
 <div align="center">
-<a href="https://www.buymeacoffee.com/mendoncaedr" target="_blank"><img width="171" height="48" src="https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/21fc45fc8cce9bc2e10a07acd8185b904bce84dd/static/icons/bmc-button.svg" alt=""/></a>&nbsp;&nbsp;&nbsp;<a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/000000/paypal--v1.png" alt=""/></a>
+<a href="https://www.buymeacoffee.com/edgarmendonca" target="_blank"><img width="171" height="48" src="https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/21fc45fc8cce9bc2e10a07acd8185b904bce84dd/static/icons/bmc-button.svg" alt=""/></a>&nbsp;&nbsp;&nbsp;<a href="#" target="_blank"><img width="48" height="48" src="https://img.icons8.com/color/48/000000/paypal--v1.png" alt=""/></a>
 </div>
 
 
