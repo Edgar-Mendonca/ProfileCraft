@@ -630,17 +630,11 @@ function getSelectedMobileApp() {
 function getSelectedMobileApp() {
     const selectedOther = [];
     const otherapp = [
-        { id: "mobileAppDevelopmentFlutter", name: "flutter", icon: "https://img.icons8.com/color/48/000000/flutter.png" },
-        { id: "mobileAppDevelopmentReactNative", name: "reactnative", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
+        { id: "otherMatlab", name: "matlab", icon: "https://img.icons8.com/fluency/48/matlab.png" },
+        { id: "otherOctave", name: "octave", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
+        { id: "otherArduino", name: "arduino", icon: "https://img.icons8.com/color/48/000000/arduino.png" },
 
-        { id: "mobileAppDevelopmentKotlin", name: "kotlin", icon: "https://img.icons8.com/color/48/000000/kotlin.png" },
-        { id: "mobileAppDevelopmentIOS", name: "ios", icon: "https://img.icons8.com/color/48/000000/ios-logo.png" },
 
-        { id: "mobileAppDevelopmentJava", name: "java", icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" },
-        { id: "mobileAppDevelopmentXamarin", name: "xamarin", icon: "https://img.icons8.com/color/48/000000/xamarin.png" },
-
-        { id: "mobileAppDevelopmentIonic", name: "ionic", icon: "https://img.icons8.com/color/48/000000/ionic.png" },
-        { id: "mobileAppDevelopmentAndroid", name: "android", icon: "https://img.icons8.com/color/48/000000/android-os.png" },
 
     ]; // Define Other Apps
 

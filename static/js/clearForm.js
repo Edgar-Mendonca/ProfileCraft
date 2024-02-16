@@ -317,6 +317,22 @@ function clearForm() {
     });
 
 
+    // Clear selected Other Apps
+    const otherapp = [
+        "otherMatlab",
+        "otherOctave",
+        "otherArduino",
+
+    ];
+
+    otherapp.forEach(languageId => {
+        const checkbox = document.getElementById(languageId);
+        if (checkbox) {
+            checkbox.checked = false;
+        }
+    });
+
+
 
 
 
