@@ -1,0 +1,42 @@
+issue_forms:
+  - name: Bug Report
+    about: Create a report to help us improve
+    fields:
+      - type: input
+        id: Describe the bug
+        label: Describe the bug
+        description: A clear and concise description of what the bug is.
+        required: true
+      - type: input
+        id: To Reproduce
+        label: To Reproduce
+        description: Steps to reproduce the behavior.
+      - type: input
+        id: Expected behavior
+        label: Expected behavior
+        description: A clear and concise description of what you expected to happen.
+      - type: input
+        id: Screenshots
+        label: Screenshots
+        description: If applicable, add screenshots to help explain your problem.
+      - type: input
+        id: Additional context
+        label: Additional context
+  - name: Feature Request
+    about: Suggest an idea for this project
+    fields:
+      - type: input
+        id: Is your feature request related to a problem? Please describe.
+        label: Is your feature request related to a problem? Please describe.
+        description: A clear and concise description of what the problem is.
+      - type: input
+        id: Describe the solution you'd like
+        label: Describe the solution you'd like
+        description: A clear and concise description of what you want to happen.
+      - type: input
+        id: Describe alternatives you've considered
+        label: Describe alternatives you've considered
+        description: A clear and concise description of any alternative solutions or features you've considered.
+      - type: input
+        id: Additional context
+        label: Additional context

@@ -1,18 +1,21 @@
 ### Bug Report
 
-**Description:**
-A clear and concise description of the bug or error.
+---
+name: Bug Report 🐛
+about: Create a report to help us improve
+title: '[Bug] '
+labels: ['bug']
+assignees: ['username']
 
-**Steps to Reproduce:**
-1. 
-2. 
-3. 
+---
 
-**Expected Behavior:**
-A clear and concise description of what you expected to happen.
+**Describe the bug**
 
-**Screenshots / Logs:**
-If applicable, add screenshots or logs to help explain your problem.
+**To Reproduce**
 
-**Additional Information:**
-Add any other context about the problem here.
+**Expected behavior**
+
+**Screenshots**
+
+**Additional context**
+
