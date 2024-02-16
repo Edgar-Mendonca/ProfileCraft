@@ -82,13 +82,8 @@ function generateReadmeContent() {
 
 
 
-
-
-
-
-
     // Construct README content
-    let readmeContent = `# Hello, I'm ${fullName ? fullName : username} 👋\n\n`;
+    let readmeContent = `# Hello, I'm ${fullName ? fullName : username} <span class="wave">👋</span>\n\n`;
     readmeContent += `![Profile Views](https://komarev.com/ghpvc/?username=${username}&color=green)\n\n`;
     readmeContent += `## 📝 About Me\n${aboutMe ? aboutMe : 'Add a brief description about yourself.'}\n\n`;
 
