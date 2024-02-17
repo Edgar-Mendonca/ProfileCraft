@@ -322,8 +322,8 @@ function clearForm() {
         "otherMatlab",
         "otherOctave",
         "otherArduino",
-
         "otherLinux",
+        
         "otherGit",
         "otherRaspberryPi",
 

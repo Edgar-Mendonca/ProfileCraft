@@ -629,8 +629,8 @@ function getSelectedOther() {
         { id: "otherMatlab", name: "matlab", icon: "https://img.icons8.com/fluency/48/matlab.png" },
         { id: "otherOctave", name: "octave", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/fdbe61a92b0a913ce004d194d914a3b08f5d3077/static/icons/octave.svg" },
         { id: "otherArduino", name: "arduino", icon: "https://img.icons8.com/color/48/000000/arduino.png" },
-
         { id: "otherLinux", name: "linux", icon: "https://img.icons8.com/color/48/000000/linux.png" },
+        
         { id: "otherGit", name: "git", icon: "https://img.icons8.com/color/48/000000/git.png" },
         { id: "otherRaspberryPi", name: "raspberrypi", icon: "https://img.icons8.com/color/48/000000/raspberry-pi.png" },
 
