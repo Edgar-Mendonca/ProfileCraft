@@ -630,11 +630,21 @@ function getSelectedOther() {
         { id: "otherOctave", name: "octave", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/fdbe61a92b0a913ce004d194d914a3b08f5d3077/static/icons/octave.svg" },
         { id: "otherArduino", name: "arduino", icon: "https://img.icons8.com/color/48/000000/arduino.png" },
         { id: "otherLinux", name: "linux", icon: "https://img.icons8.com/color/48/000000/linux.png" },
-        
+
         { id: "otherGit", name: "git", icon: "https://img.icons8.com/color/48/000000/git.png" },
         { id: "otherRaspberryPi", name: "raspberrypi", icon: "https://img.icons8.com/color/48/000000/raspberry-pi.png" },
+        { id: "otherAltium", name: "altium", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8de4fbc83e34c945a433aed10808fcc6a91b7d19/static/icons/Altium.svg" },
+        { id: "otherProteus", name: "proteus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Proteus.svg" },
 
+        { id: "otherAutocad", name: "autocad", icon: "https://img.icons8.com/color/48/000000/autocad.png" },
+        { id: "otherCivil3D", name: "civil3d", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9b9b1b5567da2d4485cd4fc4839690755ebc77da/static/icons/Civil3D.svg" },
+        { id: "otherFusion360", name: "fusion360", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/40fd353734af249a79d6815df1f3c382fe6b0c81/static/icons/Fusion360.svg" },
+        { id: "otherInventor", name: "inventor", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Inventor.svg" },
 
+        { id: "otherAbaqus", name: "abaqus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Simulia.svg" },
+        { id: "otherCatia", name: "catia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8de4fbc83e34c945a433aed10808fcc6a91b7d19/static/icons/Catia.svg" },
+        { id: "otherDelmia", name: "delmia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Delmia.svg" },
+        { id: "otherSolidworks", name: "solidworks", icon: "https://img.icons8.com/color/48/000000/solidworks.png" },
 
     ]; // Define Other Apps
 

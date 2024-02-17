@@ -323,10 +323,21 @@ function clearForm() {
         "otherOctave",
         "otherArduino",
         "otherLinux",
-        
+
         "otherGit",
         "otherRaspberryPi",
+        "otherAltium",
+        "otherProteus",
 
+        "otherAutocad",
+        "otherCivil3D",
+        "otherFusion360",
+        "otherInventor",
+
+        "otherAbaqus",
+        "otherCatia",
+        "otherDelmia",
+        "otherSolidworks",
     ];
 
     otherapp.forEach(languageId => {
