@@ -24,6 +24,7 @@ ProfileCraft is built using the following technologies:
     <img width="48" height="48" src="https://img.icons8.com/fluency/48/icons8-new-logo.png" title="Icons8"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Logo" title="ChatGPT Logo" width="48" height="48"/>
 </div>
+GitHub Profile Views Counter by [Anton Komarev](https://github.com/antonkomarev/github-profile-views-counter)
 
 
 ## Installation
