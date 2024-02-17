@@ -660,8 +660,6 @@ function getSelectedOther() {
 
 
 
-
-
 // Function to update the live preview
 function updateLivePreview() {
     const codePreview = document.getElementById("codePreview");
@@ -809,7 +807,6 @@ otherappCheckboxes.forEach(checkbox => {
 
 
 
-
 // Initial live preview update
 updateLivePreview();
 
@@ -824,4 +821,3 @@ function downloadReadme() {
     link.click();
     document.body.removeChild(link);
 }
-

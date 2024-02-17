@@ -350,14 +350,6 @@ function clearForm() {
 
 
 
-
-
-
-
-
-
-
-
     // Update live preview after clearing the form
     updateLivePreview();
 
