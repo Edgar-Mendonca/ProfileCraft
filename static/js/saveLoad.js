@@ -4,6 +4,7 @@ function saveFormData() {
         username: document.getElementById("username").value,
         fullName: document.getElementById("fullName").value,
         aboutMe: document.getElementById("aboutMe").value,
+
         workingOnText: document.getElementById("workingOnText").value,
         workingOnURL: document.getElementById("workingOnURL").value,
         collaborateText: document.getElementById("collaborateText").value,
@@ -23,46 +24,35 @@ function saveFormData() {
         experiencesText: document.getElementById("experiencesText").value,
         experiencesURL: document.getElementById("experiencesURL").value,
         funFactText: document.getElementById("funFactText").value,
-        
+
         githubUsername: document.getElementById("githubUsername").value,
         youtubeUsername: document.getElementById("youtubeUsername").value,
-
         twitterUsername: document.getElementById("twitterUsername").value,
         linkedinUsername: document.getElementById("linkedinUsername").value,
-
         facebookUsername: document.getElementById("facebookUsername").value,
         instagramUsername: document.getElementById("instagramUsername").value,
-
         stackoverflowUsername: document.getElementById("stackoverflowUsername").value,
         rssFeed: document.getElementById("rssFeed").value,
-
         devtoUsername: document.getElementById("devtoUsername").value,
         mediumUsername: document.getElementById("mediumUsername").value,
-
         codepenUsername: document.getElementById("codepenUsername").value,
         codesandboxUsername: document.getElementById("codesandboxUsername").value,
-
         gitlabUsername: document.getElementById("gitlabUsername").value,
         bitbucketUsername: document.getElementById("bitbucketUsername").value,
 
-        // Include Programming Languages
-        selectedLanguages: getSelectedLanguages()
-
     };
-
     localStorage.setItem('formData', JSON.stringify(formData));
 }
 
 // Function to load form data from localStorage
 function loadFormData() {
-    const savedFormData = localStorage.getItem('formData');
+    const formData = JSON.parse(localStorage.getItem('formData'));
 
-    if (savedFormData) {
-        const formData = JSON.parse(savedFormData);
+    if (formData) {
+        document.getElementById("username").value = formData.username;
+        document.getElementById("fullName").value = formData.fullName;
+        document.getElementById("aboutMe").value = formData.aboutMe;
 
-        document.getElementById("username").value = formData.username || '';
-        document.getElementById("fullName").value = formData.fullName || '';
-        document.getElementById("aboutMe").value = formData.aboutMe || '';
         document.getElementById("workingOnText").value = formData.workingOnText || '';
         document.getElementById("workingOnURL").value = formData.workingOnURL || '';
         document.getElementById("collaborateText").value = formData.collaborateText || '';
@@ -98,19 +88,180 @@ function loadFormData() {
         document.getElementById("gitlabUsername").value = formData.gitlabUsername || '';
         document.getElementById("bitbucketUsername").value = formData.bitbucketUsername || '';
 
-        // Load selected programming languages
-        const selectedLanguages = formData.selectedLanguages || [];
-        selectedLanguages.forEach(language => {
-            const checkbox = document.getElementById(language.id);
-            if (checkbox) {
-                checkbox.checked = true;
-            }
-        });
 
+
+        updateLivePreview();
     }
 }
 
-// Initial live preview update
-updateLivePreview();
 // Load form data when the page is loaded
 loadFormData();
+
+// Event listener for input changes in the "About Me" section
+document.getElementById("aboutMe").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+});
+
+// Event listener for input changes in the "Username and Full Name" sections
+document.getElementById("username").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+});
+document.getElementById("fullName").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+});
+
+
+// Event listener for input changes in the "Profile Highlights" sections
+document.getElementById("workingOnText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("workingOnURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+});
+
+document.getElementById("collaborateText").addEventListener("input",function() {
+    saveFormData();
+    updateLivePreview();
+});  
+document.getElementById("collaborateURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("helpWithText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("helpWithURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("learningText").addEventListener("input",function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("learningURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("askMeText").addEventListener("input",function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("askMeURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("reachMeText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+});  
+document.getElementById("reachMeURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("projectsText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("projectsURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("articlesText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("articlesURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("experiencesText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("experiencesURL").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("funFactText").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+
+
+// Event listeners for input changes in the "Connect with me" section
+document.getElementById("githubUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("youtubeUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("twitterUsername").addEventListener("input",function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("linkedinUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("facebookUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("instagramUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("stackoverflowUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("rssFeed").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("devtoUsername").addEventListener("input",function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("mediumUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("codepenUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("codesandboxUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+
+document.getElementById("gitlabUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+document.getElementById("bitbucketUsername").addEventListener("input", function() {
+    saveFormData();
+    updateLivePreview();
+}); 
+

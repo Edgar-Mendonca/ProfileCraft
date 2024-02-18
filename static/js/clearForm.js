@@ -348,13 +348,15 @@ function clearForm() {
     });
 
 
+    // Clear data stored in local storage
+    localStorage.removeItem('formData');
 
+    // Save the cleared form data to localStorage
+    saveFormData();
 
     // Update live preview after clearing the form
     updateLivePreview();
 
-    // Save the cleared form data to localStorage
-    saveFormData();
 }
 
 // Event listener for the "Clear Form" button
