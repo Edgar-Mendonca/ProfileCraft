@@ -40,7 +40,6 @@ function saveFormData() {
         gitlabUsername: document.getElementById("gitlabUsername").value,
         bitbucketUsername: document.getElementById("bitbucketUsername").value,
 
-        // Include Programming Languages
         selectedLanguages: getSelectedProgrammingLanguages()
 
     };
@@ -91,7 +90,6 @@ function loadFormData() {
         document.getElementById("gitlabUsername").value = formData.gitlabUsername || '';
         document.getElementById("bitbucketUsername").value = formData.bitbucketUsername || '';
 
-        // Load selected programming languages
         const selectedLanguages = formData.selectedLanguages || [];
         selectedLanguages.forEach(language => {
             const checkbox = document.getElementById(language.id);
@@ -100,7 +98,6 @@ function loadFormData() {
             }
         });
                 
-
 
         updateLivePreview();
     }
@@ -211,7 +208,6 @@ document.getElementById("funFactText").addEventListener("input", function() {
     saveFormData();
     updateLivePreview();
 }); 
-
 
 
 // Event listeners for input changes in the "Connect with me" section
