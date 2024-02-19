@@ -40,6 +40,9 @@ function saveFormData() {
         gitlabUsername: document.getElementById("gitlabUsername").value,
         bitbucketUsername: document.getElementById("bitbucketUsername").value,
 
+        // Include Programming Languages
+        selectedLanguages: getSelectedProgrammingLanguages()
+
     };
     localStorage.setItem('formData', JSON.stringify(formData));
 }
@@ -88,6 +91,15 @@ function loadFormData() {
         document.getElementById("gitlabUsername").value = formData.gitlabUsername || '';
         document.getElementById("bitbucketUsername").value = formData.bitbucketUsername || '';
 
+        // Load selected programming languages
+        const selectedLanguages = formData.selectedLanguages || [];
+        selectedLanguages.forEach(language => {
+            const checkbox = document.getElementById(language.id);
+            if (checkbox) {
+                checkbox.checked = true;
+            }
+        });
+                
 
 
         updateLivePreview();
@@ -264,4 +276,7 @@ document.getElementById("bitbucketUsername").addEventListener("input", function(
     saveFormData();
     updateLivePreview();
 }); 
+
+
+
 
