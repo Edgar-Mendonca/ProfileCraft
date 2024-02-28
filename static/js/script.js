@@ -644,7 +644,7 @@ function getSelectedOther() {
         { id: "otherAbaqus", name: "abaqus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Simulia.svg" },
         { id: "otherCatia", name: "catia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8de4fbc83e34c945a433aed10808fcc6a91b7d19/static/icons/Catia.svg" },
         { id: "otherDelmia", name: "delmia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Delmia.svg" },
-        { id: "otherSolidworks", name: "solidworks", icon: "https://img.icons8.com/color/48/000000/solidworks.png" },
+        { id: "otherSolidworks", name: "solidworks", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5ea20738c8869c797ce221c5327c07f515834259/static/icons/Solidworks.svg" },
 
     ]; // Define Other Apps
 
