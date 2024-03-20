@@ -206,102 +206,76 @@ function generateReadmeContent() {
     readmeContent += `## ✨ Skills\n`;
     // Add Programming Languages section
     if (selectedProgrammingLanguages.length > 0) {
-        readmeContent += '### Programming Languages\n\n';
         selectedProgrammingLanguages.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Frontend Development section
     if (selectedFrontend.length > 0) {
-        readmeContent += '### Frontend Development\n\n';
         selectedFrontend.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Backend Development section
     if (selectedBackend.length > 0) {
-        readmeContent += '### Backend Development\n\n';
         selectedBackend.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add AI/ML section
     if (selectedAIML.length > 0) {
-        readmeContent += '### AI/ML\n\n';
         selectedAIML.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Database section
     if (selectedDatabase.length > 0) {
-        readmeContent += '### Database\n\n';
         selectedDatabase.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Framework section
     if (selectedFramework.length > 0) {
-        readmeContent += '### Framework\n\n';
         selectedFramework.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Site Generators section
     if (selectedSiteGenerators.length > 0) {
-        readmeContent += '### Site Generators\n\n';
         selectedSiteGenerators.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Softwares section
     if (selectedSoftwares.length > 0) {
-        readmeContent += '### Softwares\n\n';
         selectedSoftwares.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Devops section
     if (selectedDevops.length > 0) {
-        readmeContent += '### Devops\n\n';
         selectedDevops.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add BaaS section
     if (selectedBaas.length > 0) {
-        readmeContent += '### BaaS\n\n';
         selectedBaas.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Mobile App Development section
     if (selectedMobileApp.length > 0) {
-        readmeContent += '### Mobile App Development\n\n';
         selectedMobileApp.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
     // Add Other Apps section
     if (selectedOther.length > 0) {
-        readmeContent += '### Other Apps\n\n';
         selectedOther.forEach(language => {
             readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
         });
-        readmeContent += '\n\n';
     }
-
-
 
     return readmeContent;
 }
@@ -310,30 +284,30 @@ function generateReadmeContent() {
 function getSelectedProgrammingLanguages() {
     const selectedLanguages = [];
     const programmingLanguages = [
-        { id: "programmingLanguageC", name: "C", icon: "https://img.icons8.com/color/48/000000/c-programming.png" },
-        { id: "programmingLanguageCpp", name: "C++", icon: "https://img.icons8.com/color/48/000000/c-plus-plus-logo.png" },
-        { id: "programmingLanguageCSharp", name: "C#", icon: "https://img.icons8.com/color/48/000000/c-sharp-logo.png" },
-        { id: "programmingLanguageJava", name: "Java", icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" },
+        { id: "programmingLanguageC", name: "C", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" },
+        { id: "programmingLanguageCpp", name: "C++", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" },
+        { id: "programmingLanguageCSharp", name: "C#", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" },
+        { id: "programmingLanguageJava", name: "Java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original-wordmark.svg" },
 
-        { id: "programmingLanguagePython", name: "Python", icon: "https://img.icons8.com/color/48/000000/python.png" },
-        { id: "programmingLanguageJavaScript", name: "JavaScript", icon: "https://img.icons8.com/color/48/000000/javascript.png" },
-        { id: "programmingLanguageRuby", name: "Ruby", icon: "https://img.icons8.com/color/48/000000/ruby-programming-language.png" },
-        { id: "programmingLanguageSwift", name: "Swift", icon: "https://img.icons8.com/color/48/000000/swift.png" },
+        { id: "programmingLanguagePython", name: "Python", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" },
+        { id: "programmingLanguageJavaScript", name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" },
+        { id: "programmingLanguageRuby", name: "Ruby", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ruby/ruby-original.svg" },
+        { id: "programmingLanguageSwift", name: "Swift", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swift/swift-original.svg" },
 
-        { id: "programmingLanguagePHP", name: "PHP", icon: "https://img.icons8.com/officexs/48/000000/php-logo.png" },
-        { id: "programmingLanguageTypeScript", name: "TypeScript", icon: "https://img.icons8.com/color/48/000000/typescript.png" },
-        { id: "programmingLanguageGo", name: "Go", icon: "https://img.icons8.com/color/48/000000/golang.png" },
-        { id: "programmingLanguageRust", name: "Rust", icon: "https://img.icons8.com/color/48/rust-programming-language.png" },
+        { id: "programmingLanguagePHP", name: "PHP", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" },
+        { id: "programmingLanguageTypeScript", name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" },
+        { id: "programmingLanguageGo", name: "Go", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/go/go-original.svg" },
+        { id: "programmingLanguageRust", name: "Rust", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rust/rust-original.svg" },
 
-        { id: "programmingLanguageKotlin", name: "Kotlin", icon: "https://img.icons8.com/color/48/000000/kotlin.png" },
-        { id: "programmingLanguageScala", name: "Scala", icon: "https://img.icons8.com/external-tal-revivo-color-tal-revivo/48/external-scala-a-general-purpose-programming-language-with-strong-static-type-system-logo-color-tal-revivo.png" },
-        { id: "programmingLanguageHaskell", name: "Haskell", icon: "https://img.icons8.com/color/48/000000/haskell.png" },
-        { id: "programmingLanguageLua", name: "Lua", icon: "https://img.icons8.com/color/48/lua-language.png" },
+        { id: "programmingLanguageKotlin", name: "Kotlin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg" },
+        { id: "programmingLanguageScala", name: "Scala", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scala/scala-original.svg" },
+        { id: "programmingLanguageHaskell", name: "Haskell", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/haskell/haskell-original.svg" },
+        { id: "programmingLanguageLua", name: "Lua", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/lua/lua-original.svg" },
 
-        { id: "programmingLanguageElixir", name: "Elixir", icon: "https://www.vectorlogo.zone/logos/elixir-lang/elixir-lang-icon.svg" },
-        { id: "programmingLanguageErlang", name: "Erlang", icon: "https://www.vectorlogo.zone/logos/erlang/erlang-icon.svg" },
-        { id: "programmingLanguageCoffeeScript", name: "CoffeeScript", icon: "https://img.icons8.com/external-tal-revivo-bold-tal-revivo/48/external-coffeescript-is-a-little-language-that-compiles-into-javascript-logo-bold-tal-revivo.png" },
-        { id: "programmingLanguageObjectiveC", name: "ObjectiveC", icon: "https://www.vectorlogo.zone/logos/apple_objectivec/apple_objectivec-icon.svg" },
+        { id: "programmingLanguageElixir", name: "Elixir", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/elixir/elixir-original.svg" },
+        { id: "programmingLanguageErlang", name: "Erlang", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/erlang/erlang-original.svg" },
+        { id: "programmingLanguageCoffeeScript", name: "CoffeeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/coffeescript/coffeescript-original.svg" },
+        { id: "programmingLanguageObjectiveC", name: "ObjectiveC", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/objectivec/objectivec-plain.svg" },
     ]; // Define programming languages
 
     programmingLanguages.forEach(language => {
@@ -350,25 +324,25 @@ function getSelectedProgrammingLanguages() {
 function getSelectedFrontend() {
     const selectedFrontend = [];
     const frontendLanguages = [
-        { id: "frontendLanguageHTML", name: "HTML", icon: "https://img.icons8.com/color/48/000000/html-5.png" },
-        { id: "frontendLanguageCSS", name: "CSS", icon: "https://img.icons8.com/color/48/000000/css3.png" },
-        { id: "frontendLanguageReact", name: "React", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
-        { id: "frontendLanguageVue", name: "Vue", icon: "https://img.icons8.com/color/48/000000/vue-js.png" },
+        { id: "frontendLanguageHTML", name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
+        { id: "frontendLanguageCSS", name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
+        { id: "frontendLanguageReact", name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        { id: "frontendLanguageVue", name: "Vue", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
 
-        { id: "frontendLanguageAngular", name: "angular", icon: "https://img.icons8.com/color/48/000000/angularjs.png" },
-        { id: "frontendLanguageBootstrap", name: "bootstrap", icon: "https://img.icons8.com/color/48/000000/bootstrap.png" },
-        { id: "frontendLanguageMaterialize", name: "materialize", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8a0ba41b55a2490894e1d09eccac7ccf782abb16/static/icons/materialize.svg" },
-        { id: "frontendLanguageTailwind", name: "tailwind", icon: "https://img.icons8.com/color/48/tailwind_css.png" },
+        { id: "frontendLanguageAngular", name: "angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" },
+        { id: "frontendLanguageBootstrap", name: "bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
+        { id: "frontendLanguageMaterialize", name: "materialize", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/materializecss/materializecss-original.svg" },
+        { id: "frontendLanguageTailwind", name: "tailwind", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" },
 
-        { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/c46702fc15f871acb4945b950e16235859404f48/static/icons/AngularJS.svg" },
-        { id: "frontendLanguageBackboneJS", name: "backbonejs", icon: "https://www.vectorlogo.zone/logos/backbonejs/backbonejs-icon.svg" },
-        { id: "frontendLanguageVuetify", name: "vuetify", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/b2e02430c24681c8ca887cce8d57a77c40bb02e6/static/icons/vuetify.svg" },
-        { id: "frontendLanguageSass", name: "sass", icon: "https://img.icons8.com/color/48/000000/sass.png" },
+        { id: "frontendLanguageAngularJS", name: "angularjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angularjs/angularjs-original.svg" },
+        { id: "frontendLanguageBackboneJS", name: "backbonejs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/backbonejs/backbonejs-original.svg" },
+        { id: "frontendLanguageVuetify", name: "vuetify", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuetify/vuetify-original.svg" },
+        { id: "frontendLanguageSass", name: "sass", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sass/sass-original.svg" },
 
-        { id: "frontendLanguageSvelte", name: "svelte", icon: "https://www.vectorlogo.zone/logos/sveltetechnology/sveltetechnology-icon.svg" },
-        { id: "frontendLanguagePugJS", name: "pugjs", icon: "https://img.icons8.com/color/48/000000/pug.png" },
-        { id: "frontendLanguageRedux", name: "redux", icon: "https://img.icons8.com/color/48/000000/redux.png" },
-        { id: "frontendLanguageBulma", name: "bulma", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/422e626e4d4ff6aa2cda8cbc4e201ba12309fdf5/static/icons/bulma.svg" },
+        { id: "frontendLanguageSvelte", name: "svelte", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/svelte/svelte-original.svg" },
+        { id: "frontendLanguagePugJS", name: "pugjs", icon: "https://cdn.worldvectorlogo.com/logos/pug.svg" },
+        { id: "frontendLanguageRedux", name: "redux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg" },
+        { id: "frontendLanguageBulma", name: "bulma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bulma/bulma-plain.svg" },
     ]; // Define Frontend languages
 
     frontendLanguages.forEach(language => {
@@ -381,25 +355,24 @@ function getSelectedFrontend() {
     return selectedFrontend;
 }
 
-
 // Function to get selected Backend Development languages
 function getSelectedBackend() {
     const selectedBackend = [];
     const backendLanguages = [
-        { id: "backendLanguageNodeJS", name: "nodejs", icon: "https://img.icons8.com/color/48/000000/nodejs.png" },
-        { id: "backendLanguageExpressJS", name: "expressjs", icon: "https://img.icons8.com/ios/50/express-js.png" },
-        { id: "backendLanguageDjango", name: "django", icon: "https://img.icons8.com/color/48/000000/django.png" },
-        { id: "backendLanguageFlask", name: "flask", icon: "https://img.icons8.com/color/48/000000/flask.png" },
+        { id: "backendLanguageNodeJS", name: "nodejs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" },
+        { id: "backendLanguageExpressJS", name: "expressjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" },
+        { id: "backendLanguageDjango", name: "django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain-wordmark.svg" },
+        { id: "backendLanguageFlask", name: "flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original-wordmark.svg" },
 
-        { id: "backendLanguageSpring", name: "spring", icon: "https://www.vectorlogo.zone/logos/springio/springio-icon.svg" },
-        { id: "backendLanguageGraphQL", name: "graphql", icon: "https://img.icons8.com/color/48/000000/graphql.png" },
-        { id: "backendLanguageKafka", name: "kafka", icon: "https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" },
-        { id: "backendLanguageNestJS", name: "nestjs", icon: "https://img.icons8.com/color/48/000000/nestjs.png" },
+        { id: "backendLanguageSpring", name: "spring", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" },
+        { id: "backendLanguageGraphQL", name: "graphql", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/graphql/graphql-plain.svg" },
+        { id: "backendLanguageKafka", name: "kafka", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/apachekafka/apachekafka-original.svg" },
+        { id: "backendLanguageNestJS", name: "nestjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" },
 
-        { id: "backendLanguageSolr", name: "solr", icon: "https://www.vectorlogo.zone/logos/apache_solr/apache_solr-icon.svg" },
-        { id: "backendLanguageRabbitMQ", name: "rabbitmq", icon: "https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" },
-        { id: "backendLanguageHadoop", name: "hadoop", icon: "https://www.vectorlogo.zone/logos/apache_hadoop/apache_hadoop-icon.svg" },
-        { id: "backendLanguageOpenResty", name: "openresty", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/2054198fb91ff060760931956c11d906409c0955/static/icons/openresty.svg" },
+        { id: "backendLanguageSolr", name: "solr", icon: "https://cdn.worldvectorlogo.com/logos/solr.svg" },
+        { id: "backendLanguageRabbitMQ", name: "rabbitmq", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rabbitmq/rabbitmq-original.svg" },
+        { id: "backendLanguageHadoop", name: "hadoop", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hadoop/hadoop-original.svg" },
+        { id: "backendLanguageOpenResty", name: "openresty", icon: "https://openresty.org/images/logo.png" },
     ]; // Define Backend languages
 
     backendLanguages.forEach(language => {
@@ -416,11 +389,17 @@ function getSelectedBackend() {
 function getSelectedAIML() {
     const selectedAIML = [];
     const aiMl = [
-        { id: "aiMlTensorflow", name: "tensorflow", icon: "https://img.icons8.com/color/48/000000/tensorflow.png" },
-        { id: "aiMlPytorch", name: "pytorch", icon: "https://img.icons8.com/fluency/48/pytorch.png" },
+        { id: "aiMlTensorflow", name: "tensorflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg" },
+        { id: "aiMlPytorch", name: "pytorch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg" },
+        { id: "aiMlkeras", name: "keras", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/keras/keras-original.svg" },
 
-        { id: "aiMlPandas", name: "pandas", icon: "https://img.icons8.com/color/48/000000/pandas.png" },
-        { id: "aiMlScikitLearn", name: "scikitLearn", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/afdeb7b34f41113a54290e91e8ab401c34e969f1/static/icons/Scikit_learn.svg" },
+        { id: "aiMlPandas", name: "pandas", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pandas/pandas-original.svg" },
+        { id: "aiMlScikitLearn", name: "scikitLearn", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg" },
+        { id: "aiMlopenCV", name: "openCV", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg" },
+
+        { id: "aiMlnumPy", name: "numPy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg" },
+        { id: "aiMlseaborn", name: "seaborn", icon: "https://cdn.worldvectorlogo.com/logos/seaborn-1.svg" },
+        { id: "aiMlmatplotlib", name: "matplotlib", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matplotlib/matplotlib-original.svg" },
 
     ]; // Define AI/ML
 
@@ -434,16 +413,19 @@ function getSelectedAIML() {
     return selectedAIML;
 }
 
-
 // Function to get Database
 function getSelectedDatabase() {
     const selectedDatabase = [];
     const database = [
-        { id: "databaseMongoDB", name: "mongodb", icon: "https://img.icons8.com/color/48/000000/mongodb.png" },
-        { id: "databaseMySQL", name: "databaseMySQL", icon: "https://img.icons8.com/color/48/000000/mysql.png" },
+        { id: "databaseMongoDB", name: "mongodb", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" },
+        { id: "databaseMySQL", name: "mysql", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" },
+        { id: "databasesqlAlchemy", name: "sqlAlchemy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlalchemy/sqlalchemy-original.svg" },
+        { id: "databaseRealm", name: "realm", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/realm/realm-original.svg" },
 
-        { id: "databasePostgreSQL", name: "databasePostgreSQL", icon: "https://img.icons8.com/color/48/000000/postgreesql.png" },
-        { id: "databaseSQLite", name: "databaseSQLite", icon: "https://www.vectorlogo.zone/logos/sqlite/sqlite-icon.svg" },
+        { id: "databasePostgreSQL", name: "postgresql", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" },
+        { id: "databaseSQLite", name: "sqlite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg" },
+        { id: "databaseAzureSQL", name: "azureSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" },
+        { id: "databaseMicrosoftSQL", name: "MicrosoftSQL", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg" },
 
     ]; // Define Database
 
