@@ -237,19 +237,19 @@ function generateReadmeContent() {
     // Add Framework section
     if (selectedFramework.length > 0) {
         selectedFramework.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
     }
     // Add Site Generators section
     if (selectedSiteGenerators.length > 0) {
         selectedSiteGenerators.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
     }
     // Add Softwares section
     if (selectedSoftwares.length > 0) {
         selectedSoftwares.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
     }
     // Add Devops section
@@ -326,8 +326,8 @@ function getSelectedFrontend() {
     const frontendLanguages = [
         { id: "frontendLanguageHTML", name: "HTML", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" },
         { id: "frontendLanguageCSS", name: "CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" },
-        { id: "frontendLanguageReact", name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
-        { id: "frontendLanguageVue", name: "Vue", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+        { id: "frontendLanguageReact", name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" },
+        { id: "frontendLanguageVue", name: "Vue", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original-wordmark.svg" },
 
         { id: "frontendLanguageAngular", name: "angular", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg" },
         { id: "frontendLanguageBootstrap", name: "bootstrap", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg" },
@@ -439,16 +439,21 @@ function getSelectedDatabase() {
     return selectedDatabase;
 }
 
-
 // Function to get Framework
 function getSelectedFramework() {
     const selectedFramework = [];
     const framework = [
-        { id: "frameworkDjango", name: "django", icon: "https://img.icons8.com/color/48/000000/django.png" },
-        { id: "frameworkFlask", name: "flask", icon: "https://img.icons8.com/color/48/000000/flask.png" },
+        { id: "frameworkDjango", name: "django", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg" },
+        { id: "frameworkFlask", name: "flask", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" },
+        { id: "frameworkFastAPI", name: "FastAPI", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/fastapi/fastapi-original.svg" },
 
-        { id: "frameworkDotNet", name: "dotnet", icon: "https://www.vectorlogo.zone/logos/dotnet/dotnet-icon.svg" },
-        { id: "frameworkRails", name: "rails", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/24997877abcc2bea4f51b913621a85d284d2a72f/static/icons/Ruby_On_Rails.svg" },
+        { id: "frameworkDotNet", name: "dotnet", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dot-net/dot-net-original.svg" },
+        { id: "frameworkRails", name: "rails", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/rails/rails-original-wordmark.svg" },
+        { id: "frameworkCodeIgniter", name: "codeIgniter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/codeigniter/codeigniter-plain-wordmark.svg" },
+
+        { id: "frameworkDrupal", name: "drupal", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original.svg" },
+        { id: "frameworkLaravel", name: "laravel", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg" },
+        { id: "frameworkBlazor", name: "Blazor", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blazor/blazor-original.svg" },
 
     ]; // Define Framework
 
@@ -467,15 +472,21 @@ function getSelectedFramework() {
 function getSelectedSiteGenerators() {
     const selectedSiteGenerators = [];
     const siteGenerators = [
-        { id: "siteGeneratorJekyll", name: "jekyll", icon: "https://www.vectorlogo.zone/logos/jekyllrb/jekyllrb-icon.svg" },
-        { id: "siteGeneratorHugo", name: "hugo", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5c940dbf0928e98183d5b004e1c619609c6e35d5/static/icons/Hugo.svg" },
-        { id: "siteGeneratorGatsby", name: "gatsby", icon: "https://www.vectorlogo.zone/logos/gatsbyjs/gatsbyjs-icon.svg" },
-        { id: "siteGeneratorHexo", name: "hexo", icon: "https://www.vectorlogo.zone/logos/hexoio/hexoio-icon.svg" },
+        { id: "siteGeneratorJekyll", name: "jekyll", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jekyll/jekyll-original.svg" },
+        { id: "siteGeneratorHugo", name: "hugo", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/hugo/hugo-original.svg" },
+        { id: "siteGeneratorGatsby", name: "gatsby", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gatsby/gatsby-original.svg" },
+        { id: "siteGeneratorHexo", name: "hexo", icon: "https://cdn.worldvectorlogo.com/logos/hexo.svg" },
 
-        { id: "siteGeneratorPelican", name: "pelican", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5c940dbf0928e98183d5b004e1c619609c6e35d5/static/icons/pelican.svg" },
-        { id: "siteGeneratorVuePress", name: "vuepress", icon: "https://img.icons8.com/color/48/000000/vue-js.png" },
-        { id: "siteGeneratorNextJS", name: "nextjs", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5c940dbf0928e98183d5b004e1c619609c6e35d5/static/icons/Nextjs.svg" },
-        { id: "siteGeneratorMkdocs", name: "mkdocs", icon: "https://img.icons8.com/color/48/000000/markdown.png" },
+        { id: "siteGeneratorPelican", name: "pelican", icon: "https://getpelican.com/theme/img/logo.svg" },
+        { id: "siteGeneratorVuePress", name: "vuepress", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg" },
+        { id: "siteGeneratorNextJS", name: "nextjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" },
+        { id: "siteGeneratorMkdocs", name: "mkdocs", icon: "https://upload.wikimedia.org/wikipedia/commons/d/dd/MkDocs_Logo.png" },
+    
+        { id: "siteGeneratorMiddleman", name: "Middleman", icon: "https://cdn.worldvectorlogo.com/logos/middleman.svg" },
+        { id: "siteGeneratorNuxtjs", name: "Nuxtjs", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nuxtjs/nuxtjs-original.svg" },
+        { id: "siteGeneratorEleventy", name: "Eleventy", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eleventy/eleventy-original.svg" },
+        { id: "siteGeneratorGridsome", name: "Gridsome", icon: "https://cdn.worldvectorlogo.com/logos/gridsome.svg" },
+
     ]; // Define Site Generators
 
     siteGenerators.forEach(language => {
@@ -493,20 +504,30 @@ function getSelectedSiteGenerators() {
 function getSelectedSoftwares() {
     const selectedSoftwares = [];
     const softwares = [
-        { id: "softwareIllustrator", name: "illustrator", icon: "https://img.icons8.com/color/48/000000/adobe-illustrator.png" },
-        { id: "softwarePhotoshop", name: "photoshop", icon: "https://img.icons8.com/color/48/000000/adobe-photoshop.png" },
-        { id: "softwarePremierPro", name: "premierPro", icon: "https://img.icons8.com/color/48/000000/adobe-premiere-pro.png" },
-        { id: "softwareXD", name: "xd", icon: "https://img.icons8.com/color/48/000000/adobe-xd.png" },
+        { id: "softwareIllustrator", name: "illustrator", icon: "https://cdn.worldvectorlogo.com/logos/adobe-illustrator-cc-icon.svg" },
+        { id: "softwarePhotoshop", name: "photoshop", icon: "https://cdn.worldvectorlogo.com/logos/adobe-photoshop-2.svg" },
+        { id: "softwarePremierPro", name: "premierPro", icon: "https://cdn.worldvectorlogo.com/logos/premiere-pro-cc.svg" },
+        { id: "softwareXD", name: "xd", icon: "https://cdn.worldvectorlogo.com/logos/adobe-xd-2.svg" },
 
-        { id: "softwareFigma", name: "figma", icon: "https://img.icons8.com/color/48/000000/figma--v1.png" },
-        { id: "softwareBlender", name: "blender", icon: "https://img.icons8.com/color/48/000000/blender-3d.png" },
-        { id: "softwareAfterEffects", name: "afterEffects", icon: "https://img.icons8.com/color/48/000000/adobe-after-effects.png" },
-        { id: "softwareSketch", name: "sketch", icon: "https://www.vectorlogo.zone/logos/sketchapp/sketchapp-icon.svg" },
+        { id: "softwareAfterEffects", name: "afterEffects", icon: "https://cdn.worldvectorlogo.com/logos/after-effects-1.svg" },
+        { id: "softwareAfterEffects", name: "afterEffects", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/Adobe_Animate_CC_icon_%282020%29.svg/1024px-Adobe_Animate_CC_icon_%282020%29.svg.png" },
+        { id: "softwareIndesign", name: "Indesign", icon: "https://cdn.worldvectorlogo.com/logos/adobe-indesign-cc-icon.svg" },
+        { id: "softwareLightroom", name: "Lightroom", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Adobe_Photoshop_Lightroom_CC_logo.svg/1024px-Adobe_Photoshop_Lightroom_CC_logo.svg.png" },
 
-        { id: "softwareGIMP", name: "gimp", icon: "https://img.icons8.com/color/48/000000/gimp.png" },
-        { id: "softwareInkscape", name: "inkscape", icon: "https://img.icons8.com/color/48/000000/inkscape.png" },
-        { id: "softwareUnity", name: "unity", icon: "https://img.icons8.com/color/48/000000/unity.png" },
+        { id: "softwareFigma", name: "figma", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" },
+        { id: "softwareBlender", name: "blender", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/blender/blender-original.svg" },
+        { id: "softwareSketch", name: "sketch", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg" },
+        { id: "softwareInkscape", name: "inkscape", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/inkscape/inkscape-original.svg" },
+
+        { id: "softwareGIMP", name: "gimp", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gimp/gimp-original.svg" },
+        { id: "softwareUnity", name: "unity", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unity/unity-original.svg" },
+        { id: "softwareUnrealEngine", name: "UnrealEngine", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/unrealengine/unrealengine-original.svg" },
+        { id: "softwareGodot", name: "Godot", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/godot/godot-original.svg" },
+
         { id: "softwareInVision", name: "invision", icon: "https://www.vectorlogo.zone/logos/invisionapp/invisionapp-icon.svg" },
+        { id: "softwareFramer", name: "Framer", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg" },
+        { id: "softwareWebflow", name: "Webflow", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webflow/webflow-original.svg" },
+
     ]; // Define Softwares
 
     softwares.forEach(language => {
