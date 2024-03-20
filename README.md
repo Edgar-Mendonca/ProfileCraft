@@ -22,6 +22,7 @@ ProfileCraft is built using the following technologies:
     <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" alt="JavaScript" title="JavaScript" width="48" height="48"/>
     <img src="https://img.icons8.com/color/48/000000/bootstrap.png" alt="Bootstrap" title="Bootstrap" width="48" height="48"/>
     <img width="48" height="48" src="https://img.icons8.com/fluency/48/icons8-new-logo.png" title="Icons8"/>
+    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/devicon/devicon-original.svg"  width="48" height="48"/>
     <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="ChatGPT Logo" title="ChatGPT Logo" width="48" height="48"/>
 </div>
 
