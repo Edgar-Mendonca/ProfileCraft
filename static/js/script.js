@@ -273,7 +273,7 @@ function generateReadmeContent() {
     // Add Other Apps section
     if (selectedOther.length > 0) {
         selectedOther.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="auto" height="40"/> &nbsp;&nbsp;`;
         });
     }
 
@@ -552,6 +552,7 @@ function getSelectedDevops() {
 
         { id: "devopsToolDocker", name: "docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
         { id: "devopsToolGCP", name: "gcp", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+        { id: "devopsToolGit", name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" },
         { id: "devopsToolGitLab", name: "gitlab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" },
         { id: "devopsToolJenkins", name: "jenkins", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" },
 
@@ -639,25 +640,31 @@ function getSelectedMobileApp() {
 function getSelectedOther() {
     const selectedOther = [];
     const otherapp = [
-        { id: "otherMatlab", name: "matlab", icon: "https://img.icons8.com/fluency/48/matlab.png" },
-        { id: "otherOctave", name: "octave", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/fdbe61a92b0a913ce004d194d914a3b08f5d3077/static/icons/octave.svg" },
-        { id: "otherArduino", name: "arduino", icon: "https://img.icons8.com/color/48/000000/arduino.png" },
-        { id: "otherLinux", name: "linux", icon: "https://img.icons8.com/color/48/000000/linux.png" },
+        { id: "otherAutocad", name: "autocad", icon: "static/icons/Autodesk/autocad.png" },
+        { id: "otherCivil3D", name: "civil3d", icon: "static/icons/Autodesk/civil3d.png" },
+        { id: "otherFusion360", name: "fusion360", icon: "static/icons/Autodesk/fusion.png" },
+        { id: "otherInventor", name: "inventor", icon: "static/icons/Autodesk/inventor.png" },
+        { id: "other3dsMax", name: "3dsMax", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threedsmax/threedsmax-original.svg" },
 
-        { id: "otherGit", name: "git", icon: "https://img.icons8.com/color/48/000000/git.png" },
-        { id: "otherRaspberryPi", name: "raspberrypi", icon: "https://img.icons8.com/color/48/000000/raspberry-pi.png" },
-        { id: "otherAltium", name: "altium", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8de4fbc83e34c945a433aed10808fcc6a91b7d19/static/icons/Altium.svg" },
-        { id: "otherProteus", name: "proteus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Proteus.svg" },
+        { id: "otherMatlab", name: "matlab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" },
+        { id: "otherOctave", name: "octave", icon: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/Gnu-octave-logo.svg/2048px-Gnu-octave-logo.svg.png" },
+        { id: "otherAnaconda", name: "Anaconda", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/anaconda/anaconda-original.svg" },
+        { id: "otherJupyter", name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" },
+        { id: "otherColab", name: "Colab", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" },
 
-        { id: "otherAutocad", name: "autocad", icon: "https://img.icons8.com/color/48/000000/autocad.png" },
-        { id: "otherCivil3D", name: "civil3d", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9b9b1b5567da2d4485cd4fc4839690755ebc77da/static/icons/Civil3D.svg" },
-        { id: "otherFusion360", name: "fusion360", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/40fd353734af249a79d6815df1f3c382fe6b0c81/static/icons/Fusion360.svg" },
-        { id: "otherInventor", name: "inventor", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Inventor.svg" },
+        { id: "otherAltium", name: "altium", icon: "static/icons/altium-designer.png" },
+        { id: "otherArduino", name: "arduino", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg" },
+        { id: "otherRaspberryPi", name: "raspberrypi", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" },
+        { id: "otherProteus", name: "proteus", icon: "https://upload.wikimedia.org/wikipedia/en/5/5a/Proteus_Design_Suite_Atom_Logo.png" },
+        { id: "otherLabVIEW", name: "LabVIEW", icon: "static/icons/LabVIEW.png" },
+
+        { id: "otherLinux", name: "linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
+        { id: "otherUbuntu", name: "Ubuntu", icon: "https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" },
 
         { id: "otherAbaqus", name: "abaqus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Simulia.svg" },
         { id: "otherCatia", name: "catia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8de4fbc83e34c945a433aed10808fcc6a91b7d19/static/icons/Catia.svg" },
         { id: "otherDelmia", name: "delmia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Delmia.svg" },
-        { id: "otherSolidworks", name: "solidworks", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/5ea20738c8869c797ce221c5327c07f515834259/static/icons/Solidworks.svg" },
+        { id: "otherSolidworks", name: "solidworks", icon: "https://cdn.worldvectorlogo.com/logos/solidworks-logo-1.svg" },
 
     ]; // Define Other Apps
 
