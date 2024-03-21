@@ -640,10 +640,10 @@ function getSelectedMobileApp() {
 function getSelectedOther() {
     const selectedOther = [];
     const otherapp = [
-        { id: "otherAutocad", name: "autocad", icon: "static/icons/Autodesk/autocad.png" },
-        { id: "otherCivil3D", name: "civil3d", icon: "static/icons/Autodesk/civil3d.png" },
-        { id: "otherFusion360", name: "fusion360", icon: "static/icons/Autodesk/fusion.png" },
-        { id: "otherInventor", name: "inventor", icon: "static/icons/Autodesk/inventor.png" },
+        { id: "otherAutocad", name: "autocad", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/Autodesk/autocad.png" },
+        { id: "otherCivil3D", name: "civil3d", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/Autodesk/civil3d.png" },
+        { id: "otherFusion360", name: "fusion360", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/Autodesk/fusion.png" },
+        { id: "otherInventor", name: "inventor", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/Autodesk/inventor.png" },
         { id: "other3dsMax", name: "3dsMax", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/threedsmax/threedsmax-original.svg" },
 
         { id: "otherMatlab", name: "matlab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" },
@@ -652,11 +652,11 @@ function getSelectedOther() {
         { id: "otherJupyter", name: "Jupyter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg" },
         { id: "otherColab", name: "Colab", icon: "https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Colaboratory_SVG_Logo.svg" },
 
-        { id: "otherAltium", name: "altium", icon: "static/icons/altium-designer.png" },
+        { id: "otherAltium", name: "altium", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/altium-designer.png" },
         { id: "otherArduino", name: "arduino", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/arduino/arduino-original-wordmark.svg" },
         { id: "otherRaspberryPi", name: "raspberrypi", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/raspberrypi/raspberrypi-original.svg" },
         { id: "otherProteus", name: "proteus", icon: "https://upload.wikimedia.org/wikipedia/en/5/5a/Proteus_Design_Suite_Atom_Logo.png" },
-        { id: "otherLabVIEW", name: "LabVIEW", icon: "static/icons/LabVIEW.png" },
+        { id: "otherLabVIEW", name: "LabVIEW", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/LabVIEW.png" },
 
         { id: "otherLinux", name: "linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
         { id: "otherUbuntu", name: "Ubuntu", icon: "https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" },
