@@ -267,7 +267,7 @@ function generateReadmeContent() {
     // Add Mobile App Development section
     if (selectedMobileApp.length > 0) {
         selectedMobileApp.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
     }
     // Add Other Apps section
@@ -606,18 +606,21 @@ function getSelectedBaas() {
 function getSelectedMobileApp() {
     const selectedMobileApp = [];
     const mobileapp = [
-        { id: "mobileAppDevelopmentFlutter", name: "flutter", icon: "https://img.icons8.com/color/48/000000/flutter.png" },
-        { id: "mobileAppDevelopmentReactNative", name: "reactnative", icon: "https://img.icons8.com/color/48/000000/react-native.png" },
+        { id: "mobileAppDevelopmentAndroid", name: "android", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" },
+        { id: "mobileAppDevelopmentIOS", name: "ios", icon: "https://upload.wikimedia.org/wikipedia/commons/c/ca/IOS_logo.svg" },
+        { id: "mobileAppDevelopmentJava", name: "java", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" },
 
-        { id: "mobileAppDevelopmentKotlin", name: "kotlin", icon: "https://img.icons8.com/color/48/000000/kotlin.png" },
-        { id: "mobileAppDevelopmentIOS", name: "ios", icon: "https://img.icons8.com/color/48/000000/ios-logo.png" },
+        { id: "mobileAppDevelopmentFlutter", name: "flutter", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" },
+        { id: "mobileAppDevelopmentReactNative", name: "reactnative", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" },
+        { id: "mobileAppDevelopmentNativeScript", name: "NativeScript", icon: "https://cdn.worldvectorlogo.com/logos/nativescript.svg" },
 
-        { id: "mobileAppDevelopmentJava", name: "java", icon: "https://img.icons8.com/color/48/000000/java-coffee-cup-logo.png" },
-        { id: "mobileAppDevelopmentXamarin", name: "xamarin", icon: "https://img.icons8.com/color/48/000000/xamarin.png" },
+        { id: "mobileAppDevelopmentIonic", name: "ionic", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ionic/ionic-original.svg" },
+        { id: "mobileAppDevelopmentKotlin", name: "kotlin", icon: "https://cdn.worldvectorlogo.com/logos/kotlin-1.svg" },
+        { id: "mobileAppDevelopmentDart", name: "Dart", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" },
 
-        { id: "mobileAppDevelopmentIonic", name: "ionic", icon: "https://img.icons8.com/color/48/000000/ionic.png" },
-        { id: "mobileAppDevelopmentAndroid", name: "android", icon: "https://img.icons8.com/color/48/000000/android-os.png" },
-
+        { id: "mobileAppDevelopmentCordova", name: "Cordova", icon: "https://cordova.apache.org/static/img/cordova_bot.png" },
+        { id: "mobileAppDevelopmentXamarin", name: "xamarin", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xamarin/xamarin-original.svg" },
+        { id: "mobileAppDevelopmentXcode", name: "Xcode", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/xcode/xcode-original.svg" },
     ]; // Define Mobile App Development
 
     mobileapp.forEach(language => {
