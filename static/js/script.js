@@ -255,13 +255,13 @@ function generateReadmeContent() {
     // Add Devops section
     if (selectedDevops.length > 0) {
         selectedDevops.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
     }
     // Add BaaS section
     if (selectedBaas.length > 0) {
         selectedBaas.forEach(language => {
-            readmeContent += `![${language.name}](${language.icon}?width=48&height=48) &nbsp;&nbsp;&nbsp;`;
+            readmeContent += `<img src="${language.icon}" width="40" height="40"/> &nbsp;&nbsp;`;
         });
     }
     // Add Mobile App Development section
@@ -545,20 +545,25 @@ function getSelectedSoftwares() {
 function getSelectedDevops() {
     const selectedDevops = [];
     const devops = [
-        { id: "devopsToolDocker", name: "docker", icon: "https://img.icons8.com/color/48/000000/docker.png" },
-        { id: "devopsToolKubernetes", name: "kubernetes", icon: "https://img.icons8.com/color/48/000000/kubernetes.png" },
-        { id: "devopsToolJenkins", name: "jenkins", icon: "https://img.icons8.com/color/48/000000/jenkins.png" },
-        { id: "devopsToolAnsible", name: "ansible", icon: "https://img.icons8.com/color/48/000000/ansible.png" },
+        { id: "devopsToolAnsible", name: "ansible", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/ansible/ansible-original.svg" },
+        { id: "devopsToolAzure", name: "azure", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg" },
+        { id: "devopsToolBitbucket", name: "bitbucket", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bitbucket/bitbucket-original.svg" },
+        { id: "devopsToolCircleCI", name: "circleci", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/circleci/circleci-plain.svg" },
 
-        { id: "devopsToolTerraform", name: "terraform", icon: "https://img.icons8.com/color/48/000000/terraform.png" },
-        { id: "devopsToolGitLab", name: "gitlab", icon: "https://img.icons8.com/color/48/000000/gitlab.png" },
-        { id: "devopsToolBitbucket", name: "bitbucket", icon: "https://img.icons8.com/color/48/000000/bitbucket.png" },
-        { id: "devopsToolCircleCI", name: "circleci", icon: "https://img.icons8.com/color/48/000000/circleci.png" },
+        { id: "devopsToolDocker", name: "docker", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg" },
+        { id: "devopsToolGCP", name: "gcp", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/googlecloud/googlecloud-original.svg" },
+        { id: "devopsToolGitLab", name: "gitlab", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gitlab/gitlab-original.svg" },
+        { id: "devopsToolJenkins", name: "jenkins", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jenkins/jenkins-original.svg" },
 
-        { id: "devopsToolAWS", name: "aws", icon: "https://img.icons8.com/color/48/000000/amazon-web-services.png" },
-        { id: "devopsToolAzure", name: "azure", icon: "https://img.icons8.com/color/48/000000/azure-1.png" },
-        { id: "devopsToolGCP", name: "gcp", icon: "https://img.icons8.com/color/48/000000/google-cloud-platform.png" },
-        { id: "devopsToolVagrant", name: "vagrant", icon: "https://www.vectorlogo.zone/logos/vagrantup/vagrantup-icon.svg" },
+        { id: "devopsToolAWS", name: "aws", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" },
+        { id: "devopsToolKubernetes", name: "kubernetes", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kubernetes/kubernetes-original.svg" },
+        { id: "devopsToolTerraform", name: "terraform", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/terraform/terraform-original.svg" },
+        { id: "devopsToolVagrant", name: "vagrant", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vagrant/vagrant-original.svg" },
+
+        { id: "devopsToolChef", name: "Chef", icon: "https://cdn.worldvectorlogo.com/logos/chef-13.svg" },
+        { id: "devopsToolGradle", name: "Gradle", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/gradle/gradle-original.svg" },
+        { id: "devopsToolOpenStack", name: "OpenStack", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/openstack/openstack-original.svg" },
+        { id: "devopsToolPrometheus", name: "Prometheus", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/prometheus/prometheus-original.svg" },
     ]; // Define Devops
 
     devops.forEach(language => {
@@ -576,12 +581,14 @@ function getSelectedDevops() {
 function getSelectedBaas() {
     const selectedBaas = [];
     const baas = [
-        { id: "baasServiceFirebase", name: "firebase", icon: "https://img.icons8.com/color/48/000000/firebase.png" },
+        { id: "baasServiceAmplify", name: "Amplify", icon: "https://docs.amplify.aws/assets/logo-dark.svg" },
+        { id: "baasServiceAppwrite", name: "appwrite", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/appwrite/appwrite-original.svg" },
+        { id: "baasServiceFirebase", name: "firebase", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" },
+
+
         { id: "baasServiceHeroku", name: "heroku", icon: "https://img.icons8.com/color/48/000000/heroku.png" },
-
-        { id: "baasServiceStrapi", name: "strapi", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/f6cca8f9065e60f8d4a2d35c7af2cc1022f52d4e/static/icons/strapi.svg" },
-        { id: "baasServiceAppwrite", name: "appwrite", icon: "https://www.vectorlogo.zone/logos/appwriteio/appwriteio-icon.svg" },
-
+        { id: "baasServiceStrapi", name: "strapi", icon: "https://images.spr.so/cdn-cgi/imagedelivery/j42No7y-dcokJuNgXeA0ig/32f3a89c-99c4-466f-8536-dd75f65fa320/Strapi-Monogram/w=1920,quality=80,fit=scale-down" },
+        { id: "baasServiceStrapi", name: "strapi", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/supabase/supabase-original.svg" },
     ]; // Define BaaS
 
     baas.forEach(language => {
