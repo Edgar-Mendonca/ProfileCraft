@@ -661,10 +661,10 @@ function getSelectedOther() {
         { id: "otherLinux", name: "linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
         { id: "otherUbuntu", name: "Ubuntu", icon: "https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" },
 
-        { id: "otherAbaqus", name: "abaqus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Simulia.svg" },
-        { id: "otherCatia", name: "catia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/8de4fbc83e34c945a433aed10808fcc6a91b7d19/static/icons/Catia.svg" },
-        { id: "otherDelmia", name: "delmia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/9e95459eefe9a31c68e0c669aea3c96cbb2efdb2/static/icons/Delmia.svg" },
-        { id: "otherSolidworks", name: "solidworks", icon: "https://cdn.worldvectorlogo.com/logos/solidworks-logo-1.svg" },
+        { id: "otherAbaqus", name: "abaqus", icon: "static/icons/DSS/Abaqus.png" },
+        { id: "otherCatia", name: "catia", icon: "static/icons/DSS/Catia.png" },
+        { id: "otherDelmia", name: "delmia", icon: "static/icons/DSS/Delmia.png" },
+        { id: "otherSolidworks", name: "solidworks", icon: "static/icons/DSS/Solidworks.png" },
 
     ]; // Define Other Apps
 
