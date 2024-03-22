@@ -661,11 +661,10 @@ function getSelectedOther() {
         { id: "otherLinux", name: "linux", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" },
         { id: "otherUbuntu", name: "Ubuntu", icon: "https://cdn.worldvectorlogo.com/logos/ubuntu-4.svg" },
 
-        { id: "otherAbaqus", name: "abaqus", icon: "static/icons/DSS/Abaqus.png" },
-        { id: "otherCatia", name: "catia", icon: "static/icons/DSS/Catia.png" },
-        { id: "otherDelmia", name: "delmia", icon: "static/icons/DSS/Delmia.png" },
-        { id: "otherSolidworks", name: "solidworks", icon: "static/icons/DSS/Solidworks.png" },
-
+        { id: "otherAbaqus", name: "abaqus", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/DSS/Abaqus.png" },
+        { id: "otherCatia", name: "catia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/DSS/Catia.png" },
+        { id: "otherDelmia", name: "delmia", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/DSS/Delmia.png" },
+        { id: "otherSolidworks", name: "solidworks", icon: "https://raw.githubusercontent.com/Edgar-Mendonca/ProfileCraft/main/static/icons/DSS/SolidWorks.png" },
     ]; // Define Other Apps
 
     otherapp.forEach(language => {
